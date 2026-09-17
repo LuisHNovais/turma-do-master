@@ -155,6 +155,9 @@ export function renderGamePanel(container, { onBack } = {}) {
   for (const btn of root.querySelectorAll('[data-move]')) {
     btn.addEventListener('click', () => playerMove(btn.dataset.move));
   }
+  const unlockAudio = () => { ensureAudio(); };
+  root.addEventListener('pointerdown', unlockAudio);
+  root.addEventListener('touchstart', unlockAudio, { passive: true });
   root.addEventListener('keydown', (event) => {
     const key = event.key.toLowerCase();
     if (!['a', 's', 'd'].includes(key)) return;
@@ -261,51 +264,101 @@ export function renderGamePanel(container, { onBack } = {}) {
     }
   }
 
+  function ctxBlocked(ctx) {
+    return ctx.state === 'suspended' || ctx.state === 'interrupted';
+  }
+
   function ensureAudio() {
     if (!AudioContextCtor) return null;
-    if (!state.audio) state.audio = { ctx: new AudioContextCtor(), enabled: true };
-    if (state.audio.ctx.state === 'suspended') state.audio.ctx.resume();
-    return state.audio;
+    try {
+      if (!state.audio) {
+        const ctx = new AudioContextCtor();
+        const master = ctx.createGain();
+        master.gain.value = 1;
+        master.connect(ctx.destination);
+        const beep = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA');
+        beep.setAttribute('playsinline', '');
+        beep.setAttribute('webkit-playsinline', '');
+        beep.volume = 0.01;
+        state.audio = { ctx, master, beep, enabled: true, unlocked: false };
+      }
+      const audio = state.audio;
+      const ctx = audio.ctx;
+      if (ctxBlocked(ctx)) ctx.resume();
+      audio.beep.play()?.catch(() => {});
+      if (!audio.unlocked) {
+        const buffer = ctx.createBuffer(1, 1, ctx.sampleRate);
+        const source = ctx.createBufferSource();
+        source.buffer = buffer;
+        source.connect(audio.master);
+        source.start(0);
+        const osc = ctx.createOscillator();
+        const mute = ctx.createGain();
+        mute.gain.value = 0;
+        osc.connect(mute).connect(audio.master);
+        osc.start(0);
+        osc.stop(ctx.currentTime + 0.05);
+        audio.unlocked = true;
+      }
+      return audio;
+    } catch {
+      return null;
+    }
   }
 
   function playSound(kind) {
     const audio = state.audio;
     if (!audio?.enabled) return;
     const ctx = audio.ctx;
+    if (ctxBlocked(ctx)) {
+      ctx.resume().then(() => emitSound(kind)).catch(() => {});
+      return;
+    }
+    emitSound(kind);
+  }
+
+  function emitSound(kind) {
+    const audio = state.audio;
+    if (!audio?.enabled || audio.ctx.state !== 'running') return;
+    const ctx = audio.ctx;
     const now = ctx.currentTime;
 
-    const tone = (freq, duration, type = 'square', gain = 0.06, delay = 0) => {
-      const osc = ctx.createOscillator();
-      const amp = ctx.createGain();
-      osc.type = type;
-      osc.frequency.setValueAtTime(freq, now + delay);
-      amp.gain.setValueAtTime(0.0001, now + delay);
-      amp.gain.exponentialRampToValueAtTime(gain, now + delay + 0.01);
-      amp.gain.exponentialRampToValueAtTime(0.0001, now + delay + duration);
-      osc.connect(amp).connect(ctx.destination);
-      osc.start(now + delay);
-      osc.stop(now + delay + duration + 0.02);
+    const tone = (freq, duration, type = 'square', gain = 0.12, delay = 0) => {
+      try {
+        const osc = ctx.createOscillator();
+        const amp = ctx.createGain();
+        osc.type = type;
+        osc.frequency.setValueAtTime(freq, now + delay);
+        amp.gain.setValueAtTime(0.0001, now + delay);
+        amp.gain.linearRampToValueAtTime(gain, now + delay + 0.012);
+        amp.gain.linearRampToValueAtTime(0.0001, now + delay + duration);
+        osc.connect(amp).connect(audio.master);
+        osc.start(now + delay);
+        osc.stop(now + delay + duration + 0.03);
+      } catch {}
     };
 
-    const thump = (duration = 0.11, gain = 0.09) => {
-      const osc = ctx.createOscillator();
-      const amp = ctx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(110, now);
-      osc.frequency.exponentialRampToValueAtTime(48, now + duration);
-      amp.gain.setValueAtTime(gain, now);
-      amp.gain.exponentialRampToValueAtTime(0.0001, now + duration);
-      osc.connect(amp).connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + duration + 0.02);
+    const thump = (duration = 0.12, gain = 0.2) => {
+      try {
+        const osc = ctx.createOscillator();
+        const amp = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(140, now);
+        osc.frequency.linearRampToValueAtTime(55, now + duration);
+        amp.gain.setValueAtTime(gain, now);
+        amp.gain.linearRampToValueAtTime(0.0001, now + duration);
+        osc.connect(amp).connect(audio.master);
+        osc.start(now);
+        osc.stop(now + duration + 0.03);
+      } catch {}
     };
 
-    if (kind === 'punch') { thump(); tone(180, 0.06, 'sawtooth', 0.045); }
-    if (kind === 'special') { thump(0.18, 0.12); tone(260, 0.09, 'square', 0.06); tone(520, 0.12, 'sawtooth', 0.045, 0.06); }
-    if (kind === 'guard') { tone(330, 0.05, 'triangle', 0.035); tone(220, 0.06, 'triangle', 0.025, 0.045); }
-    if (kind === 'miss') { tone(150, 0.05, 'sine', 0.025); tone(100, 0.08, 'sine', 0.02, 0.04); }
-    if (kind === 'win') { tone(392, 0.11, 'square', 0.045); tone(523, 0.12, 'square', 0.045, 0.1); tone(784, 0.18, 'square', 0.04, 0.21); }
-    if (kind === 'reset') { tone(260, 0.04, 'triangle', 0.018); }
+    if (kind === 'punch') { thump(); tone(180, 0.07, 'sawtooth', 0.1); }
+    if (kind === 'special') { thump(0.18, 0.24); tone(260, 0.1, 'square', 0.12); tone(520, 0.13, 'sawtooth', 0.09, 0.06); }
+    if (kind === 'guard') { tone(330, 0.06, 'triangle', 0.08); tone(220, 0.07, 'triangle', 0.06, 0.045); }
+    if (kind === 'miss') { tone(150, 0.06, 'sine', 0.06); tone(100, 0.09, 'sine', 0.05, 0.04); }
+    if (kind === 'win') { tone(392, 0.12, 'square', 0.1); tone(523, 0.13, 'square', 0.1, 0.1); tone(784, 0.2, 'square', 0.08, 0.21); }
+    if (kind === 'reset') { tone(260, 0.05, 'triangle', 0.05); }
   }
 
   function pulse(el, className) {

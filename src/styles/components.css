@@ -2198,16 +2198,18 @@
   top: 100%;
   z-index: 2;
   margin-top: 6px;
-  padding: 4px 8px;
-  max-width: 132px;
+  padding: 4px 10px;
+  width: max-content;
+  max-width: none;
   border: 3px solid var(--master-ink);
-  border-radius: 14px;
+  border-radius: 999px;
   background: #fffdf3;
   color: var(--master-ink);
   font-size: 12px;
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.2;
   text-align: center;
+  white-space: nowrap;
   transform: translateX(-50%);
   box-shadow: 3px 4px 0 var(--master-shadow);
 }
@@ -2368,7 +2370,7 @@
   .fight-stage {
     --stage-floor: 52px;
     min-height: 280px;
-    padding: 24px 8px var(--stage-floor);
+    padding: 24px 12px var(--stage-floor);
   }
 
   .fight-fighter {
@@ -2384,7 +2386,7 @@
 
   .fight-name {
     font-size: 11px;
-    max-width: 108px;
+    padding: 3px 9px;
   }
 
   .fight-controls button {
