@@ -34,27 +34,29 @@ export function renderGamePanel(container, { onBack } = {}) {
     audio: null,
   };
   const sprite = (side) => `
-    <div class="fight-sprite ${side}">
-      <div class="fight-head">
-        <i class="fight-hair"></i>
-        <i class="fight-brows"></i>
-        <i class="fight-glasses"></i>
-        <i class="fight-nose"></i>
-        <i class="fight-mouth"></i>
-        <i class="fight-facial"></i>
-        <span></span>
+    <div class="fight-fighter ${side}">
+      <div class="fight-sprite ${side}">
+        <div class="fight-head">
+          <i class="fight-hair"></i>
+          <i class="fight-brows"></i>
+          <i class="fight-glasses"></i>
+          <i class="fight-nose"></i>
+          <i class="fight-mouth"></i>
+          <i class="fight-facial"></i>
+          <span></span>
+        </div>
+        <div class="fight-body">
+          <i class="fight-shirt"></i>
+          <i class="fight-tie"></i>
+          <i class="fight-sash"></i>
+          <i class="fight-pin"></i>
+        </div>
+        <div class="fight-arm left"><i></i></div>
+        <div class="fight-arm right"><i></i></div>
+        <div class="fight-leg left"></div>
+        <div class="fight-leg right"></div>
       </div>
-      <div class="fight-body">
-        <i class="fight-shirt"></i>
-        <i class="fight-tie"></i>
-        <i class="fight-sash"></i>
-        <i class="fight-pin"></i>
-      </div>
-      <div class="fight-arm left"><i></i></div>
-      <div class="fight-arm right"><i></i></div>
-      <div class="fight-leg left"></div>
-      <div class="fight-leg right"></div>
-      <p></p>
+      <p class="fight-name"></p>
     </div>
   `;
 
@@ -363,7 +365,7 @@ export function renderGamePanel(container, { onBack } = {}) {
     el.dataset.expression = fighter.expression || 'neutral';
     el.setAttribute('aria-label', fighter.name);
     el.querySelector('.fight-head span').textContent = fighter.initials;
-    el.querySelector('p').textContent = fighter.name;
+    el.parentElement.querySelector('.fight-name').textContent = fighter.name;
   }
 
   container.appendChild(root);

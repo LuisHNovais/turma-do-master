@@ -1515,6 +1515,13 @@
   font-size: 13px;
 }
 
+.fight-health-meta strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .fight-health {
   height: 16px;
   overflow: hidden;
@@ -1548,12 +1555,13 @@
 }
 
 .fight-stage {
+  --stage-floor: 58px;
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   min-height: 380px;
-  padding: 46px min(9vw, 92px) 42px;
+  padding: 46px min(9vw, 92px) var(--stage-floor);
   overflow: hidden;
   border: 4px solid var(--master-ink);
   border-radius: 28px;
@@ -1579,7 +1587,7 @@
 
 .fight-stage::after {
   left: 50%;
-  bottom: 32px;
+  bottom: calc(var(--stage-floor) - 10px);
   width: min(60%, 440px);
   height: 34px;
   border-radius: 50%;
@@ -1588,9 +1596,16 @@
   filter: blur(2px);
 }
 
-.fight-sprite {
+.fight-fighter {
   position: relative;
   z-index: 1;
+  flex: 0 0 auto;
+  width: 126px;
+  height: 220px;
+}
+
+.fight-sprite {
+  position: relative;
   width: 126px;
   height: 220px;
   transform-origin: 50% 100%;
@@ -2177,26 +2192,24 @@
   border-radius: 52% 48% 50% 50%;
 }
 
-.fight-sprite p {
+.fight-name {
   position: absolute;
   left: 50%;
-  bottom: -34px;
-  margin: 0;
-  padding: 4px 10px;
+  top: 100%;
+  z-index: 2;
+  margin-top: 6px;
+  padding: 4px 8px;
+  max-width: 132px;
   border: 3px solid var(--master-ink);
-  border-radius: 999px;
+  border-radius: 14px;
   background: #fffdf3;
   color: var(--master-ink);
   font-size: 12px;
   font-weight: 900;
-  white-space: nowrap;
+  line-height: 1.15;
+  text-align: center;
   transform: translateX(-50%);
   box-shadow: 3px 4px 0 var(--master-shadow);
-}
-
-.fight-sprite.rival p,
-.fight-sprite.rival .fight-head span {
-  transform: scaleX(-1) translateX(50%);
 }
 
 .fight-sprite.rival .fight-head span {
@@ -2353,18 +2366,25 @@
   }
 
   .fight-stage {
-    min-height: 300px;
-    padding: 36px 24px 38px;
+    --stage-floor: 52px;
+    min-height: 280px;
+    padding: 24px 8px var(--stage-floor);
+  }
+
+  .fight-fighter {
+    width: 96px;
+    height: 168px;
   }
 
   .fight-sprite {
-    width: 96px;
-    height: 178px;
-    scale: 0.82;
+    scale: 0.76;
+    margin-top: -52px;
+    margin-inline: -15px;
   }
 
-  .fight-sprite p {
+  .fight-name {
     font-size: 11px;
+    max-width: 108px;
   }
 
   .fight-controls button {
