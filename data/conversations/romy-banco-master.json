@@ -1,0 +1,156 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Romy Banco Master"
+    ],
+    "saved_as": null,
+    "phone": "5511914794467",
+    "date_range": {
+      "start": "2024-03-15",
+      "end": "2024-03-15"
+    },
+    "total_messages": 9,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-03-15T15:17:40",
+      "date": "2024-03-15",
+      "time": "15:17:40",
+      "sender": "DV",
+      "content": "Romy esse barci moraes por favor nao deixe atrasar um dia, coloca no seu controle",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-03-15T15:17:49",
+      "date": "2024-03-15",
+      "time": "15:17:49",
+      "sender": "DV",
+      "content": "É o pgto mais importante que temos",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-03-15T15:18:09",
+      "date": "2024-03-15",
+      "time": "15:18:09",
+      "sender": "Romy Banco Master",
+      "content": "pode deixar, estou fazendo direto por aqui",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "Romy esse barci moraes por favor nao deixe atrasar um dia, coloca no seu controle",
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-03-15T15:18:12",
+      "date": "2024-03-15",
+      "time": "15:18:12",
+      "sender": "Romy Banco Master",
+      "content": "neste instante",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-03-15T15:18:52",
+      "date": "2024-03-15",
+      "time": "15:18:52",
+      "sender": "DV",
+      "content": "Mas todo mês acompanha isso pra mim",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-03-15T15:19:00",
+      "date": "2024-03-15",
+      "time": "15:19:00",
+      "sender": "DV",
+      "content": "Pode pagar sempre, sem nota",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-03-15T15:19:04",
+      "date": "2024-03-15",
+      "time": "15:19:04",
+      "sender": "DV",
+      "content": "Do jeito que for",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-03-15T15:19:16",
+      "date": "2024-03-15",
+      "time": "15:19:16",
+      "sender": "Romy Banco Master",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-03-15T15:21:48",
+      "date": "2024-03-15",
+      "time": "15:21:48",
+      "sender": "Romy Banco Master",
+      "content": "[anexo] barci.pdf — STR0007, Banco Master S/A → BARCI DE MORAES SOCIEDADE DE ADVOGADOS, R$ 3.422.268,14, 15/03/2024",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "barci.pdf",
+      "urls": [],
+      "source_page": 153,
+      "source_figure": 152
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-03-15",
+        "message_count": 9,
+        "first_message_id": 1,
+        "last_message_id": 9
+      }
+    ]
+  }
+}

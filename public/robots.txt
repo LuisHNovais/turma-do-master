@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# AI crawlers welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Índice para LLMs e o conteúdo completo em texto
+# https://turmadomaster.vercel.app/llms.txt
+# https://turmadomaster.vercel.app/llms-full.txt
+
+Sitemap: https://turmadomaster.vercel.app/sitemap.xml

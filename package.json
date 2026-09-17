@@ -1,0 +1,31 @@
+{
+  "name": "a-turma-do-master",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node node_modules/vite/bin/vite.js",
+    "build": "node scripts/split-data.mjs && node scripts/export.mjs && node node_modules/vite/bin/vite.js build && node scripts/prerender.mjs",
+    "preview": "node node_modules/vite/bin/vite.js preview",
+    "split-data": "node scripts/split-data.mjs",
+    "build-ipj-data": "node scripts/build-ipj-data.mjs",
+    "export": "node scripts/export.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "test": "node node_modules/vitest/vitest.mjs run",
+    "test:watch": "node node_modules/vitest/vitest.mjs",
+    "test:coverage": "node node_modules/vitest/vitest.mjs run --coverage",
+    "test:e2e": "node node_modules/@playwright/test/cli.js test --config tests/e2e/playwright.config.js",
+    "verify": "npm run build && npm run test && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@vitest/coverage-v8": "^3.0.0",
+    "jsdom": "^28.1.0",
+    "jszip": "^3.10.1",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Luiz Rennó"
+    ],
+    "saved_as": null,
+    "phone": "553186058949",
+    "date_range": {
+      "start": "2024-04-19",
+      "end": "2024-04-19"
+    },
+    "total_messages": 9,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-04-19T10:14:22",
+      "date": "2024-04-19",
+      "time": "10:14:22",
+      "sender": "Luiz Rennó",
+      "content": "Aqui, sou extremamente preocupado com dinheiro dos outros! Estou montando uma pasta e ao final te apresentarei nos centavos ok?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-19T10:15:00",
+      "date": "2024-04-19",
+      "time": "10:15:00",
+      "sender": "DV",
+      "content": "Semana que vem estou fazendo um evento super exclusivo com alexandre de moraes em londres",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-19T10:15:05",
+      "date": "2024-04-19",
+      "time": "10:15:05",
+      "sender": "DV",
+      "content": "Talvez valha a ida de vcs",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-19T10:15:06",
+      "date": "2024-04-19",
+      "time": "10:15:06",
+      "sender": "DV",
+      "content": "Dois",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-04-19T10:15:22",
+      "date": "2024-04-19",
+      "time": "10:15:22",
+      "sender": "DV",
+      "content": "[anexo] DigitalInviteVersão 2 — GRUPO VOTO · I FÓRUM JURÍDICO BRASIL DE IDEIAS · LONDRES · 24-26 Abril",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "DigitalInviteVersão 2",
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-04-19T10:15:33",
+      "date": "2024-04-19",
+      "time": "10:15:33",
+      "sender": "DV",
+      "content": "Pede pra ele nao passar adiante",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-04-19T10:15:41",
+      "date": "2024-04-19",
+      "time": "10:15:41",
+      "sender": "DV",
+      "content": "Estamos mantendo reservado",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-04-19T10:15:50",
+      "date": "2024-04-19",
+      "time": "10:15:50",
+      "sender": "DV",
+      "content": "Concorrente dele nao vai pq nao se da c alexandre",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-04-19T10:16:30",
+      "date": "2024-04-19",
+      "time": "10:16:30",
+      "sender": "Luiz Rennó",
+      "content": "Ok! Volto com vc",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 185,
+      "source_figure": 191
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-04-19",
+        "message_count": 9,
+        "first_message_id": 1,
+        "last_message_id": 9
+      }
+    ]
+  }
+}

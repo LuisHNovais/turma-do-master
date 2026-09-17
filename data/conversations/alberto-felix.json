@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Alberto Felix de Oliveira Neto"
+    ],
+    "saved_as": null,
+    "phone": "5511994881612",
+    "date_range": {
+      "start": "2025-07-14",
+      "end": "2025-10-01"
+    },
+    "total_messages": 14,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-07-14T16:49:05",
+      "date": "2025-07-14",
+      "time": "16:49:05",
+      "sender": "Alberto Felix",
+      "content": "Temos 40mm de contas a pagar pendentes, que seguramos semana passada",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-07-14T16:49:16",
+      "date": "2025-07-14",
+      "time": "16:49:16",
+      "sender": "Alberto Felix",
+      "content": "Podemos pagar uns 15mm hoje para nao acumular?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-07-14T16:50:09",
+      "date": "2025-07-14",
+      "time": "16:50:09",
+      "sender": "DV",
+      "content": "O que e",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-07-14T16:51:19",
+      "date": "2025-07-14",
+      "time": "16:51:19",
+      "sender": "Alberto Felix",
+      "content": "[imagem] Planilha de contas a pagar Banco Master S/A, vencimento 14/07/25, total R$ 42.241.538,97 — inclui BARCI DE MORAES R$ 3.422.268,14",
+      "type": "image",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": true,
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-07-14T16:54:41",
+      "date": "2025-07-14",
+      "time": "16:54:41",
+      "sender": "DV",
+      "content": "Paga 15 e inclui o barci moraes",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-07-14T16:54:50",
+      "date": "2025-07-14",
+      "time": "16:54:50",
+      "sender": "Alberto Felix",
+      "content": "Pagamos barci hj",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-07-14T16:54:52",
+      "date": "2025-07-14",
+      "time": "16:54:52",
+      "sender": "Alberto Felix",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 156,
+      "source_figure": 155
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-10-01T21:01:03",
+      "date": "2025-10-01",
+      "time": "21:01:03",
+      "sender": "Alberto Felix",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    },
+    {
+      "id": 9,
+      "timestamp": "2025-10-01T21:35:19",
+      "date": "2025-10-01",
+      "time": "21:35:19",
+      "sender": "Alberto Felix",
+      "content": "Chegou btg\nPagamsos metropoles e barci",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    },
+    {
+      "id": 10,
+      "timestamp": "2025-10-01T21:42:23",
+      "date": "2025-10-01",
+      "time": "21:42:23",
+      "sender": "DV",
+      "content": "Mas nao faz barci pix ne",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    },
+    {
+      "id": 11,
+      "timestamp": "2025-10-01T21:42:25",
+      "date": "2025-10-01",
+      "time": "21:42:25",
+      "sender": "DV",
+      "content": "Fez?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    },
+    {
+      "id": 12,
+      "timestamp": "2025-10-01T21:42:46",
+      "date": "2025-10-01",
+      "time": "21:42:46",
+      "sender": "Alberto Felix",
+      "content": "Fez, nao pode?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    },
+    {
+      "id": 13,
+      "timestamp": "2025-10-01T21:44:41",
+      "date": "2025-10-01",
+      "time": "21:44:41",
+      "sender": "Alberto Felix",
+      "content": "Foi pix para os mesmos dados da ted",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    },
+    {
+      "id": 14,
+      "timestamp": "2025-10-01T21:46:48",
+      "date": "2025-10-01",
+      "time": "21:46:48",
+      "sender": "DV",
+      "content": "Nao e bom",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 157,
+      "source_figure": 156
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-07-14",
+        "message_count": 7,
+        "first_message_id": 1,
+        "last_message_id": 7
+      },
+      {
+        "date": "2025-10-01",
+        "message_count": 7,
+        "first_message_id": 8,
+        "last_message_id": 14
+      }
+    ]
+  }
+}

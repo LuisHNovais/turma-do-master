@@ -1,0 +1,2423 @@
+/* Component styles — shared UI elements */
+
+/* ── Date separator badge (enhanced for Batch 5) ─ */
+/* Additional date badge styles live in chat.css (.chat-date-badge) */
+
+/* ── Bubble tail visibility — only show on first message of a group ── */
+.chat-msg-row + .chat-msg-row.incoming > .chat-msg-bubble.incoming {
+  border-top-left-radius: 8px;
+}
+
+.chat-msg-row + .chat-msg-row.incoming > .chat-msg-bubble.incoming .chat-msg-tail {
+  display: none;
+}
+
+.chat-msg-row + .chat-msg-row.outgoing > .chat-msg-bubble.outgoing {
+  border-top-right-radius: 8px;
+}
+
+.chat-msg-row + .chat-msg-row.outgoing > .chat-msg-bubble.outgoing .chat-msg-tail {
+  display: none;
+}
+
+/* ── Consecutive same-direction spacing ──────── */
+.chat-msg-row.incoming + .chat-msg-row.incoming,
+.chat-msg-row.outgoing + .chat-msg-row.outgoing {
+  margin-top: 1px;
+}
+
+/* Extra gap between direction changes */
+.chat-msg-row.incoming + .chat-msg-row.outgoing,
+.chat-msg-row.outgoing + .chat-msg-row.incoming {
+  margin-top: 6px;
+}
+
+/* ── Context Menu ────────────────────────────── */
+.context-menu {
+  position: fixed;
+  z-index: 100;
+  min-width: 160px;
+  padding: 6px 0;
+  background-color: #fffdf3;
+  border: 3px solid var(--master-ink);
+  border-radius: 16px;
+  box-shadow: 6px 7px 0 var(--master-shadow);
+  overflow: hidden;
+  animation: contextMenuIn 120ms ease-out;
+}
+
+@keyframes contextMenuIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.context-menu-icon {
+  display: inline-flex;
+  align-items: center;
+  width: 20px;
+  flex-shrink: 0;
+  color: var(--WDS-content-deemphasized);
+}
+
+.context-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 9px 20px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 80ms;
+}
+
+.context-menu-item:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.context-menu-item:active {
+  background-color: var(--WDS-surface-pressed);
+}
+
+/* ── Shared drawer base ──────────────────────── */
+/* Drawers are flex children of .main-area — they push the chat view aside */
+.msg-info-drawer,
+.contact-info-drawer {
+  width: 0;
+  min-width: 0;
+  height: 100%;
+  background-color: var(--WDS-background-wash-plain);
+  border-left: 3px solid var(--master-ink);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.msg-info-drawer.open,
+.contact-info-drawer.open {
+  width: 40%;
+  min-width: 300px;
+  transition: width 250ms ease-out, min-width 250ms ease-out;
+}
+
+/* ── Message Info Drawer ─────────────────────── */
+.msg-info-drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  height: 59px;
+  background: linear-gradient(90deg, #fff8dc, #e4f7ff);
+  border-bottom: 3px solid var(--master-ink);
+  flex-shrink: 0;
+}
+
+.msg-info-drawer-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  padding: 4px;
+  line-height: 1;
+}
+
+.msg-info-drawer-close:hover {
+  color: var(--WDS-content-default);
+}
+
+.msg-info-drawer-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.msg-info-preview {
+  margin: 20px 24px;
+  padding: 8px 10px;
+  background-color: var(--WDS-systems-bubble-surface-outgoing);
+  border-radius: 8px;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, .1);
+}
+
+.msg-info-preview-content {
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.msg-info-preview-meta {
+  display: block;
+  text-align: right;
+  font-size: 11px;
+  color: var(--WDS-systems-bubble-content-deemphasized);
+  margin-top: 4px;
+}
+
+.msg-info-fields {
+  padding: 0 24px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Stacked layout: title on top, value below — like WhatsApp info drawer */
+.msg-info-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 0;
+}
+
+.msg-info-field-label {
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  font-weight: 500;
+}
+
+.msg-info-field-value {
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+}
+
+@media (max-width: 600px) {
+  .msg-info-drawer.open,
+  .contact-info-drawer.open,
+  .chat-search-drawer.open {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ── Contact Info Drawer ─────────────────────── */
+.contact-info-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  height: 59px;
+  background: linear-gradient(90deg, #fff8dc, #e4f7ff);
+  border-bottom: 3px solid var(--master-ink);
+  flex-shrink: 0;
+}
+
+.contact-info-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  padding: 4px;
+  line-height: 1;
+}
+
+.contact-info-close:hover {
+  color: var(--WDS-content-default);
+}
+
+.contact-info-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.contact-info-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contact-info-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 24px 20px;
+}
+
+.contact-info-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 3px solid var(--master-ink);
+  box-shadow: 5px 5px 0 var(--master-shadow);
+}
+
+.contact-info-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-info-name {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+  margin-bottom: 4px;
+}
+
+.contact-info-phone {
+  font-size: 14px;
+  color: var(--WDS-content-deemphasized);
+  margin-bottom: 16px;
+}
+
+.contact-info-search-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--WDS-lines-outline-deemphasized);
+  border-radius: 20px;
+  color: var(--WDS-accent);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 80ms;
+}
+
+.contact-info-search-btn:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.contact-info-divider {
+  height: 8px;
+  background-color: var(--WDS-surface-emphasized);
+}
+
+.contact-info-section {
+  padding: 16px 24px;
+}
+
+.contact-info-section-label {
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+  margin-bottom: 4px;
+}
+
+.contact-info-section-value {
+  font-size: 16px;
+  color: var(--WDS-content-default);
+}
+
+.contact-info-actions {
+  padding: 4px 0;
+}
+
+.contact-info-action-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  cursor: default;
+}
+
+.contact-info-action-icon {
+  flex-shrink: 0;
+  color: var(--WDS-content-deemphasized);
+}
+
+.contact-info-action-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-info-action-label {
+  font-size: 15px;
+  color: var(--WDS-content-default);
+}
+
+.contact-info-action-detail {
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+  margin-top: 2px;
+}
+
+.contact-info-toggle {
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--WDS-neutral-gray-300);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.contact-info-action-item.disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.contact-info-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--WDS-white);
+  transition: transform 120ms;
+}
+
+/* ── Chat Search Drawer ──────────────────────── */
+.chat-search-drawer {
+  width: 0;
+  min-width: 0;
+  height: 100%;
+  background-color: var(--WDS-background-wash-plain);
+  border-left: 3px solid var(--master-ink);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.chat-search-drawer.open {
+  width: 40%;
+  min-width: 300px;
+  transition: width 250ms ease-out, min-width 250ms ease-out;
+}
+
+.chat-search-drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  height: 59px;
+  background: linear-gradient(90deg, #fff8dc, #e4f7ff);
+  border-bottom: 3px solid var(--master-ink);
+  flex-shrink: 0;
+}
+
+.chat-search-drawer-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  padding: 4px;
+  line-height: 1;
+}
+
+.chat-search-drawer-close:hover {
+  color: var(--WDS-content-default);
+}
+
+.chat-search-drawer-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.chat-search-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+}
+
+.chat-search-input-icon {
+  flex-shrink: 0;
+  color: var(--WDS-content-deemphasized);
+}
+
+.chat-search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  outline: none;
+  padding: 6px 0;
+}
+
+.chat-search-input::placeholder {
+  color: var(--WDS-content-deemphasized);
+}
+
+.chat-search-clear-btn,
+.chat-search-calendar-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chat-search-clear-btn:hover,
+.chat-search-calendar-btn:hover {
+  background-color: var(--WDS-surface-highlight);
+  color: var(--WDS-content-default);
+}
+
+.chat-search-results {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-search-empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--WDS-content-deemphasized);
+  font-size: 14px;
+}
+
+.chat-search-result-item {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+  transition: background-color 80ms;
+}
+
+.chat-search-result-item:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.chat-search-result-meta {
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+  margin-bottom: 3px;
+}
+
+.chat-search-result-content {
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Calendar Picker ─────────────────────────── */
+.chat-calendar {
+  position: absolute;
+  top: 118px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  padding: 16px;
+  background-color: var(--WDS-surface-elevated-default);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .18);
+  z-index: 70;
+}
+
+.chat-calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.chat-calendar-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+  text-transform: capitalize;
+}
+
+.chat-calendar-nav-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.chat-calendar-nav-btn:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.chat-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.chat-calendar-header {
+  font-size: 11px;
+  color: var(--WDS-content-deemphasized);
+  padding: 4px 0;
+  font-weight: 500;
+}
+
+.chat-calendar-day {
+  font-size: 13px;
+  padding: 6px 0;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: inherit;
+  color: var(--WDS-content-default);
+}
+
+.chat-calendar-day.has-messages {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.chat-calendar-day.has-messages:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.chat-calendar-day.today {
+  color: var(--WDS-accent);
+  font-weight: 700;
+}
+
+.chat-calendar-day.disabled {
+  color: var(--WDS-content-disabled);
+  cursor: default;
+}
+
+.chat-calendar-day.empty {
+  visibility: hidden;
+}
+
+/* Mobile handled in shared drawer media query above */
+
+/* ── Profile Placeholder (main area when profile is open) ── */
+.profile-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  color: var(--WDS-content-deemphasized);
+  gap: 12px;
+  z-index: 1;
+  position: relative;
+  background:
+    radial-gradient(circle at 18px 18px, rgba(23, 23, 23, 0.08) 0 3px, transparent 4px),
+    linear-gradient(135deg, #fff8dc, #ffe35c);
+  background-size: 44px 44px, cover;
+}
+
+.profile-placeholder svg {
+  color: var(--WDS-warm-gray-300);
+}
+
+.profile-placeholder-text {
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--WDS-content-default);
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0 #fffdf3, 4px 4px 0 var(--master-ink);
+}
+
+/* ── Profile Drawer (DV profile, replaces sidebar) ── */
+.profile-drawer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 340px;
+  max-width: 500px;
+  height: 100%;
+  background-color: var(--WDS-background-wash-plain);
+  border-right: 3px solid var(--master-ink);
+  overflow: hidden;
+}
+
+.profile-drawer.open {
+  transition: none;
+}
+
+.profile-drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  height: 59px;
+  background: linear-gradient(90deg, #fff8dc, #ffe35c);
+  border-bottom: 3px solid var(--master-ink);
+  flex-shrink: 0;
+}
+
+.profile-drawer-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  padding: 4px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.profile-drawer-close:hover {
+  color: var(--WDS-content-default);
+}
+
+/* Desktop: show X, hide arrow */
+.drawer-close-arrow {
+  display: none;
+}
+
+.drawer-close-x {
+  display: inline;
+}
+
+.profile-drawer-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.profile-drawer-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.profile-drawer-avatar-section {
+  display: flex;
+  justify-content: center;
+  padding: 28px 0 16px;
+}
+
+.profile-drawer-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--master-ink);
+  box-shadow: 5px 5px 0 var(--master-shadow);
+}
+
+.profile-drawer-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-drawer-field {
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+}
+
+.profile-drawer-field-label {
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+  margin-bottom: 4px;
+}
+
+.profile-drawer-field-value {
+  font-size: 16px;
+  color: var(--WDS-content-default);
+}
+
+/* ── Settings Drawer Logo ────────────────────── */
+.settings-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 24px 20px;
+}
+
+.settings-logo-img {
+  border: 3px solid var(--master-ink);
+  border-radius: 22px;
+  margin-bottom: 12px;
+  box-shadow: 6px 6px 0 var(--master-shadow);
+}
+
+.settings-logo-name {
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--master-red);
+  margin-bottom: 4px;
+  text-align: center;
+  text-shadow: 2px 2px 0 #fffdf3, 3px 3px 0 var(--master-ink);
+}
+
+.settings-logo-sub {
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+}
+
+/* ── Profile Sections (shared) ───────────────── */
+.profile-sections {
+  padding: 16px 24px 32px;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--WDS-content-default);
+  margin-bottom: 10px;
+}
+
+.profile-section-text {
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.profile-section-text a,
+.profile-action-link {
+  color: var(--WDS-green-700);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.profile-section-text a:hover,
+.profile-action-link:hover {
+  text-decoration: underline;
+}
+
+.profile-sources {
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+.profile-sources summary {
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.profile-sources ul {
+  list-style: none;
+  padding: 8px 0;
+}
+
+.profile-sources li {
+  padding: 4px 0;
+}
+
+.profile-sources a {
+  color: var(--WDS-green-700);
+  text-decoration: none;
+  font-size: 12.5px;
+}
+
+.profile-sources a:hover {
+  text-decoration: underline;
+}
+
+.profile-credits {
+  margin-top: 24px;
+  padding: 16px 0;
+  border-top: 1px solid var(--WDS-lines-divider);
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+  line-height: 1.5;
+}
+
+/* ── Search Results (sidebar) ────────────────── */
+.search-results {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.search-empty {
+  padding: 32px 16px;
+  text-align: center;
+  color: var(--WDS-content-deemphasized);
+  font-size: 14px;
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+  transition: background-color 80ms;
+}
+
+.search-result-item:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.search-result-item:focus-visible {
+  outline: 2px solid var(--WDS-accent);
+  outline-offset: -2px;
+}
+
+.search-result-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.search-result-sender {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.search-result-date {
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+  white-space: nowrap;
+}
+
+.search-result-content {
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+}
+
+.search-highlight {
+  background-color: var(--WDS-yellow-200);
+  color: var(--WDS-content-default);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+/* ── Image preview ────────────────────────────── */
+/* Shown when the platform will neither share the file nor take it on the
+   clipboard: the image goes on the page so the browser's own long-press menu
+   can reach it. */
+
+.image-preview {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  background-color: #0b141a;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.image-preview.open {
+  opacity: 1;
+}
+
+.image-preview-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.image-preview-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.image-preview-close:active {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.image-preview-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* The image gets the space that is left, never more: the hint and the buttons
+   below are laid out first, so nothing ends up on top of them. */
+.image-preview-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 16px;
+}
+
+.image-preview-img {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.image-preview-footer {
+  flex-shrink: 0;
+  padding: 14px 16px;
+  padding-bottom: max(14px, env(safe-area-inset-bottom));
+}
+
+.image-preview-hint {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.image-preview-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.image-preview-actions:not(:empty) {
+  margin-top: 14px;
+}
+
+.image-preview-action {
+  min-width: 180px;
+  padding: 12px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 22px;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.image-preview-action.primary {
+  border-color: transparent;
+  background-color: var(--WDS-primary-strong, #1daa61);
+}
+
+.image-preview-action:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* ── Contacts sheet: the list behind "Ver todos" on a contact card ───────── */
+.contacts-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  background: var(--WDS-white);
+  color: var(--WDS-content-default);
+}
+
+.contacts-sheet-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--WDS-lines-outline-deemphasized);
+}
+
+.contacts-sheet-back {
+  display: flex;
+  padding: 4px;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.contacts-sheet-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.contacts-sheet-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  background: var(--WDS-warm-gray-75);
+}
+
+.contacts-sheet-item {
+  background: var(--WDS-white);
+  margin-bottom: 8px;
+}
+
+.contacts-sheet-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--WDS-lines-outline-deemphasized);
+}
+
+.contacts-sheet-avatar img,
+.contacts-sheet-avatar > svg {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contacts-sheet-name {
+  font-size: 17px;
+}
+
+.contacts-sheet-phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+}
+
+.contacts-sheet-phone-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-sheet-phone-text small {
+  color: var(--WDS-content-deemphasized);
+  font-size: 12px;
+}
+
+.contacts-sheet-action {
+  display: flex;
+  padding: 6px;
+  border: none;
+  background: none;
+  color: var(--WDS-accent);
+  cursor: pointer;
+}
+
+.contacts-sheet-action:disabled {
+  color: var(--WDS-content-deemphasized);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Calls screen ──────────────────────────────────────────────────────────
+   Takes the chat list's place in the sidebar; the header, search and filter
+   tabs are the list's, so they step aside. */
+.sidebar--calls .sidebar-header,
+.sidebar--calls .sidebar-search,
+.sidebar--calls .sidebar-tags,
+.sidebar--calls .conversation-list {
+  display: none;
+}
+
+.calls-panel {
+  display: none;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--WDS-white);
+}
+
+.sidebar--calls .calls-panel {
+  display: flex;
+}
+
+.calls-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px 8px 16px;
+}
+
+.calls-title {
+  flex: 1;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.calls-header-btn {
+  display: flex;
+  padding: 8px;
+  border: none;
+  background: none;
+  color: var(--WDS-content-default);
+}
+
+.calls-header-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.calls-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 8px 16px;
+}
+
+.calls-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: none;
+  color: var(--WDS-content-default);
+  font: inherit;
+  font-size: 13px;
+}
+
+.calls-action:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.calls-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--WDS-warm-gray-75);
+}
+
+.calls-recent {
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.calls-item {
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+}
+
+.calls-item-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.calls-item-main:hover,
+.calls-item-kind:hover {
+  background: var(--WDS-surface-highlight);
+}
+
+.calls-item-avatar img,
+.calls-item-avatar > svg {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.calls-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.calls-item-name {
+  font-size: 16px;
+  color: var(--WDS-content-default);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.calls-item.missed .calls-item-name {
+  color: #e53935;
+}
+
+.calls-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.calls-item-arrow {
+  display: flex;
+  color: var(--WDS-accent);
+}
+
+.calls-item.missed .calls-item-arrow {
+  color: #e53935;
+}
+
+.calls-item-kind {
+  display: flex;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--WDS-content-default);
+  cursor: pointer;
+}
+
+.calls-foot {
+  padding: 12px 16px 24px;
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.sidebar-bottom-tab {
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* ── Mini game ───────────────────────────────────────────────────────────── */
+.fight-game {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  overflow: auto;
+  color: var(--master-ink);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 227, 92, 0.9) 0 0, transparent 26%),
+    radial-gradient(circle at 82% 10%, rgba(123, 220, 255, 0.65) 0 0, transparent 22%),
+    linear-gradient(135deg, #fff8dc 0%, #ffe35c 48%, #f8b6ae 100%);
+}
+
+.fight-game:focus {
+  outline: none;
+}
+
+.fight-topbar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 18px;
+  border: 3px solid var(--master-ink);
+  border-radius: 22px;
+  background: #fffdf3;
+  box-shadow: 7px 8px 0 var(--master-shadow);
+}
+
+.fight-back,
+.fight-controls button,
+.fight-roster-card {
+  font: inherit;
+}
+
+.fight-back {
+  flex-shrink: 0;
+  padding: 10px 16px;
+  border: 3px solid var(--master-ink);
+  border-radius: 999px;
+  background: var(--master-yellow);
+  color: var(--master-ink);
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 3px 4px 0 var(--master-shadow);
+}
+
+.fight-eyebrow,
+.fight-subtitle,
+.fight-title {
+  margin: 0;
+}
+
+.fight-eyebrow {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--master-red);
+}
+
+.fight-title {
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 0.95;
+  color: var(--master-red);
+  text-shadow: 2px 2px 0 #fffdf3, 4px 4px 0 var(--master-ink);
+}
+
+.fight-subtitle {
+  margin-top: 6px;
+  max-width: 720px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--WDS-content-deemphasized);
+}
+
+.fight-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  gap: 18px;
+  min-height: 0;
+}
+
+.fight-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 3px solid var(--master-ink);
+  border-radius: 24px;
+  background: rgba(255, 253, 243, 0.88);
+  box-shadow: 7px 8px 0 var(--master-shadow);
+}
+
+.fight-roster::before {
+  content: 'Escolha seu lutador';
+  display: block;
+  padding: 0 4px 6px;
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.fight-roster-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid var(--master-ink);
+  border-radius: 18px;
+  background: #fffdf3;
+  color: var(--master-ink);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 3px 4px 0 rgba(23, 23, 23, 0.2);
+}
+
+.fight-roster-card.active {
+  background: linear-gradient(135deg, var(--fighter-accent), #fffdf3 62%);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 7px 0 var(--master-shadow);
+}
+
+.fight-roster-avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 3px solid var(--master-ink);
+  border-radius: 50%;
+  background: var(--fighter);
+  color: #fffdf3;
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 1px 1px 0 var(--master-ink);
+}
+
+.fight-roster-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.fight-roster-text strong,
+.fight-roster-text small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fight-roster-text strong {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.fight-roster-text small {
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.fight-arena-wrap {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fight-scoreboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.fight-health-card {
+  padding: 12px;
+  border: 3px solid var(--master-ink);
+  border-radius: 18px;
+  background: #fffdf3;
+  box-shadow: 4px 5px 0 var(--master-shadow);
+}
+
+.fight-health-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.fight-health {
+  height: 16px;
+  overflow: hidden;
+  border: 3px solid var(--master-ink);
+  border-radius: 999px;
+  background: #ffe1dc;
+}
+
+.fight-health span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #27ae60, #ffe35c 70%, #e33b2f);
+  transition: width 260ms ease;
+}
+
+.fight-versus {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 3px solid var(--master-ink);
+  border-radius: 50%;
+  background: var(--master-red);
+  color: #fffdf3;
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  transform: rotate(-7deg);
+  box-shadow: 5px 6px 0 var(--master-shadow);
+}
+
+.fight-stage {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 380px;
+  padding: 46px min(9vw, 92px) 42px;
+  overflow: hidden;
+  border: 4px solid var(--master-ink);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at center 66%, rgba(255, 255, 255, 0.88) 0 0, transparent 30%),
+    repeating-linear-gradient(90deg, rgba(23, 23, 23, 0.08) 0 2px, transparent 2px 34px),
+    linear-gradient(#7bdcff 0 48%, #fff8dc 48% 72%, #f28c28 72%);
+  box-shadow: 8px 9px 0 var(--master-shadow);
+}
+
+.fight-stage::before,
+.fight-stage::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+}
+
+.fight-stage::before {
+  inset: 12px;
+  border: 3px dashed rgba(23, 23, 23, 0.38);
+  border-radius: 20px;
+}
+
+.fight-stage::after {
+  left: 50%;
+  bottom: 32px;
+  width: min(60%, 440px);
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(23, 23, 23, 0.22);
+  transform: translateX(-50%);
+  filter: blur(2px);
+}
+
+.fight-sprite {
+  position: relative;
+  z-index: 1;
+  width: 126px;
+  height: 220px;
+  transform-origin: 50% 100%;
+  transition: transform 180ms ease;
+}
+
+.fight-sprite.rival {
+  transform: scaleX(-1);
+}
+
+.fight-sprite.is-attacking.player {
+  transform: translateX(34px) rotate(3deg);
+}
+
+.fight-sprite.is-attacking.rival {
+  transform: scaleX(-1) translateX(34px) rotate(3deg);
+}
+
+.fight-sprite.is-hit.player {
+  transform: translateX(-20px) rotate(-8deg);
+}
+
+.fight-sprite.is-hit.rival {
+  transform: scaleX(-1) translateX(-20px) rotate(-8deg);
+}
+
+.fight-sprite.is-guarding.player {
+  transform: translateY(8px) scale(0.96);
+}
+
+.fight-sprite.is-guarding.rival {
+  transform: scaleX(-1) translateY(8px) scale(0.96);
+}
+
+.fight-sprite.is-winner.player {
+  animation: fightWinner 700ms ease-in-out infinite alternate;
+}
+
+.fight-sprite.is-winner.rival {
+  animation: fightWinnerRival 700ms ease-in-out infinite alternate;
+}
+
+.fight-sprite.is-defeated.player {
+  transform: translateY(35px) rotate(-86deg);
+}
+
+.fight-sprite.is-defeated.rival {
+  transform: scaleX(-1) translateY(35px) rotate(-86deg);
+}
+
+.fight-sprite.is-defeated .fight-arm.right {
+  right: 0;
+  transform: rotate(48deg);
+}
+
+.fight-sprite.is-defeated .fight-arm.left {
+  transform: rotate(-32deg);
+}
+
+.fight-head,
+.fight-body,
+.fight-arm,
+.fight-leg {
+  position: absolute;
+  border: 4px solid var(--master-ink);
+  box-shadow: 4px 5px 0 rgba(23, 23, 23, 0.28);
+}
+
+.fight-head {
+  left: 28px;
+  top: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50% 48% 48% 52%;
+  background: var(--skin);
+  overflow: visible;
+  z-index: 4;
+}
+
+.fight-head::before,
+.fight-head::after {
+  content: '';
+  position: absolute;
+  top: 33px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--master-ink);
+  z-index: 3;
+}
+
+.fight-head::before {
+  left: 18px;
+}
+
+.fight-head::after {
+  right: 18px;
+}
+
+.fight-head span {
+  display: none;
+}
+
+.fight-hair,
+.fight-brows,
+.fight-glasses,
+.fight-nose,
+.fight-mouth,
+.fight-facial,
+.fight-shirt,
+.fight-tie,
+.fight-sash,
+.fight-pin,
+.fight-arm i {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.fight-hair {
+  left: 6px;
+  top: -7px;
+  width: 62px;
+  height: 28px;
+  border: 4px solid var(--master-ink);
+  border-bottom: 0;
+  border-radius: 70% 70% 42% 42%;
+  background: var(--hair);
+  z-index: 2;
+}
+
+.fight-hair::before,
+.fight-hair::after {
+  content: '';
+  position: absolute;
+  background: var(--hair);
+}
+
+.fight-sprite[data-hair="dark-quiff"] .fight-hair::before {
+  left: 29px;
+  top: -12px;
+  width: 22px;
+  height: 22px;
+  border: 4px solid var(--master-ink);
+  border-bottom: 0;
+  border-radius: 70% 45% 20% 20%;
+  transform: rotate(15deg);
+}
+
+.fight-sprite[data-hair="dark-round"] .fight-hair {
+  left: 8px;
+  width: 58px;
+  height: 30px;
+  border-radius: 52% 52% 36% 36%;
+}
+
+.fight-sprite[data-hair="dark-side"] .fight-hair {
+  left: 2px;
+  top: -4px;
+  width: 66px;
+  height: 24px;
+  border-radius: 58% 58% 30% 26%;
+}
+
+.fight-sprite[data-hair="gray-comb"] .fight-hair {
+  left: 7px;
+  top: -6px;
+  width: 61px;
+  height: 26px;
+  border-radius: 64% 64% 34% 26%;
+  background: linear-gradient(110deg, #f5f0df 0 26%, var(--hair) 27% 100%);
+}
+
+.fight-sprite[data-hair="gray-comb"] .fight-hair::after {
+  right: 7px;
+  top: 2px;
+  width: 36px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  transform: rotate(-8deg);
+}
+
+.fight-sprite[data-hair="bald-sides"] .fight-hair,
+.fight-sprite[data-hair="bald"] .fight-hair {
+  left: 4px;
+  top: 14px;
+  width: 64px;
+  height: 36px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow:
+    -9px 1px 0 -1px var(--hair),
+    9px 1px 0 -1px var(--hair);
+}
+
+.fight-sprite[data-hair="bald"] .fight-hair {
+  box-shadow: none;
+}
+
+.fight-brows {
+  left: 14px;
+  top: 27px;
+  width: 44px;
+  height: 12px;
+  z-index: 4;
+}
+
+.fight-brows::before,
+.fight-brows::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--hair);
+}
+
+.fight-brows::before {
+  left: 0;
+  transform: rotate(-8deg);
+}
+
+.fight-brows::after {
+  right: 0;
+  transform: rotate(8deg);
+}
+
+.fight-sprite[data-expression="angry"] .fight-brows::before {
+  transform: rotate(18deg);
+}
+
+.fight-sprite[data-expression="angry"] .fight-brows::after {
+  transform: rotate(-18deg);
+}
+
+.fight-glasses {
+  display: none;
+  left: 12px;
+  top: 27px;
+  width: 18px;
+  height: 13px;
+  border: 3px solid var(--master-ink);
+  border-radius: 7px;
+  z-index: 5;
+}
+
+.fight-glasses::before,
+.fight-glasses::after {
+  content: '';
+  position: absolute;
+}
+
+.fight-glasses::before {
+  left: 16px;
+  top: 4px;
+  width: 9px;
+  height: 3px;
+  background: var(--master-ink);
+}
+
+.fight-glasses::after {
+  left: 25px;
+  top: -3px;
+  width: 18px;
+  height: 13px;
+  border: 3px solid var(--master-ink);
+  border-radius: 7px;
+}
+
+.fight-sprite[data-glasses="true"] .fight-glasses {
+  display: block;
+}
+
+.fight-nose {
+  left: 33px;
+  top: 40px;
+  width: 9px;
+  height: 13px;
+  border-right: 3px solid rgba(23, 23, 23, 0.52);
+  border-bottom: 3px solid rgba(23, 23, 23, 0.52);
+  border-radius: 0 0 9px 0;
+  z-index: 4;
+}
+
+.fight-mouth {
+  left: 28px;
+  top: 56px;
+  width: 18px;
+  height: 7px;
+  border-bottom: 3px solid var(--master-ink);
+  border-radius: 0 0 999px 999px;
+  z-index: 5;
+}
+
+.fight-sprite[data-expression="angry"] .fight-mouth {
+  top: 58px;
+  border-top: 3px solid var(--master-ink);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+}
+
+.fight-facial {
+  display: none;
+}
+
+.fight-sprite[data-facial="shadow"] .fight-facial {
+  display: block;
+  left: 18px;
+  top: 49px;
+  width: 38px;
+  height: 17px;
+  border-radius: 4px 4px 50% 50%;
+  background: rgba(23, 23, 23, 0.2);
+  z-index: 2;
+}
+
+.fight-sprite[data-facial="beard"] .fight-facial {
+  display: block;
+  left: 15px;
+  top: 46px;
+  width: 42px;
+  height: 24px;
+  border: 3px solid var(--master-ink);
+  border-top: 0;
+  border-radius: 5px 5px 50% 50%;
+  background: var(--hair);
+  z-index: 2;
+}
+
+.fight-body {
+  left: 26px;
+  top: 72px;
+  width: 76px;
+  height: 88px;
+  overflow: hidden;
+  border-radius: 20px 20px 16px 16px;
+  background: var(--suit);
+  z-index: 2;
+}
+
+.fight-body::before,
+.fight-body::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 32px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.12);
+  z-index: 2;
+}
+
+.fight-body::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 18%, 32% 100%, 0 100%);
+}
+
+.fight-body::after {
+  right: 0;
+  clip-path: polygon(0 18%, 100% 0, 100% 100%, 68% 100%);
+}
+
+.fight-shirt {
+  left: 24px;
+  top: 0;
+  width: 29px;
+  height: 65px;
+  background: var(--shirt);
+  clip-path: polygon(0 0, 100% 0, 78% 100%, 50% 82%, 22% 100%);
+  z-index: 1;
+}
+
+.fight-tie {
+  left: 32px;
+  top: 17px;
+  width: 12px;
+  height: 55px;
+  background: var(--tie);
+  clip-path: polygon(50% 0, 100% 15%, 76% 100%, 50% 88%, 24% 100%, 0 15%);
+  z-index: 4;
+}
+
+.fight-sash,
+.fight-pin {
+  display: none;
+}
+
+.fight-sprite[data-outfit="judge"] .fight-body {
+  left: 21px;
+  width: 86px;
+  height: 100px;
+  border-radius: 18px 18px 10px 10px;
+  background: linear-gradient(90deg, #070707, #181818 48%, #050505);
+}
+
+.fight-sprite[data-outfit="judge"] .fight-body::before,
+.fight-sprite[data-outfit="judge"] .fight-body::after {
+  top: 2px;
+  width: 43px;
+  height: 95px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.fight-sprite[data-outfit="judge"] .fight-shirt {
+  left: 31px;
+  top: 0;
+  width: 25px;
+  height: 30px;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 50% 70%, 30% 100%);
+  z-index: 4;
+}
+
+.fight-sprite[data-outfit="judge"] .fight-tie {
+  display: none;
+}
+
+.fight-sprite[data-outfit="judge"] .fight-pin {
+  display: block;
+  left: 37px;
+  top: 26px;
+  width: 12px;
+  height: 46px;
+  border-radius: 999px;
+  background: linear-gradient(#fffdf3, #dcdcdc);
+  z-index: 4;
+}
+
+.fight-sprite[data-outfit="presidential"] .fight-sash {
+  display: block;
+  left: -14px;
+  top: 15px;
+  width: 104px;
+  height: 17px;
+  border: 2px solid var(--master-ink);
+  border-radius: 999px;
+  background: linear-gradient(90deg, #009b3a 0 36%, #ffdf00 36% 66%, #002776 66% 100%);
+  transform: rotate(-32deg);
+  z-index: 5;
+}
+
+.fight-sprite[data-outfit="senator"] .fight-pin,
+.fight-sprite[data-outfit="banker"] .fight-pin {
+  display: block;
+  right: 12px;
+  top: 25px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--master-ink);
+  border-radius: 50%;
+  background: var(--fighter-accent);
+  z-index: 5;
+}
+
+.fight-sprite[data-outfit="banker"] .fight-pin {
+  background: var(--master-yellow);
+}
+
+.fight-arm {
+  top: 88px;
+  width: 34px;
+  height: 72px;
+  border-radius: 999px;
+  background: var(--suit);
+  z-index: 1;
+}
+
+.fight-arm i {
+  left: 7px;
+  bottom: -3px;
+  width: 18px;
+  height: 12px;
+  border: 3px solid var(--master-ink);
+  border-radius: 50%;
+  background: var(--shirt);
+}
+
+.fight-arm.left {
+  left: 4px;
+  transform: rotate(22deg);
+}
+
+.fight-arm.right {
+  right: 2px;
+  transform: rotate(-45deg);
+}
+
+.fight-sprite.is-attacking .fight-arm.right {
+  right: -36px;
+  width: 72px;
+  transform: rotate(-82deg);
+}
+
+.fight-sprite[data-outfit="judge"] .fight-arm {
+  top: 90px;
+  width: 40px;
+  height: 82px;
+  background: #0c0c0c;
+}
+
+.fight-sprite[data-outfit="judge"] .fight-arm.left {
+  left: -2px;
+}
+
+.fight-sprite[data-outfit="judge"] .fight-arm.right {
+  right: -4px;
+}
+
+.fight-leg {
+  top: 156px;
+  width: 34px;
+  height: 64px;
+  border-radius: 999px;
+  background: var(--pants);
+  z-index: 1;
+}
+
+.fight-leg.left {
+  left: 32px;
+  transform: rotate(10deg);
+}
+
+.fight-leg.right {
+  right: 22px;
+  transform: rotate(-10deg);
+}
+
+.fight-sprite[data-outfit="judge"] .fight-leg {
+  top: 166px;
+  height: 54px;
+  background: #080808;
+}
+
+.fight-sprite[data-fighter="moraes"] .fight-head {
+  width: 66px;
+  height: 82px;
+  left: 31px;
+  top: -8px;
+  border-radius: 52% 52% 46% 46% / 62% 62% 38% 38%;
+}
+
+.fight-sprite[data-fighter="mendonca"] .fight-head {
+  border-radius: 54% 46% 50% 46%;
+}
+
+.fight-sprite[data-build="heavy"] .fight-body {
+  left: 16px;
+  width: 96px;
+  height: 92px;
+  border-radius: 28px 28px 20px 20px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-body::before,
+.fight-sprite[data-build="heavy"] .fight-body::after {
+  width: 45px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-shirt {
+  left: 34px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-tie {
+  left: 42px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-arm.left {
+  left: -7px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-arm.right {
+  right: -8px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-leg.left {
+  left: 28px;
+}
+
+.fight-sprite[data-build="heavy"] .fight-leg.right {
+  right: 28px;
+}
+
+.fight-sprite[data-fighter="davi-alcolumbre"] .fight-head {
+  border-radius: 52% 48% 50% 50%;
+}
+
+.fight-sprite p {
+  position: absolute;
+  left: 50%;
+  bottom: -34px;
+  margin: 0;
+  padding: 4px 10px;
+  border: 3px solid var(--master-ink);
+  border-radius: 999px;
+  background: #fffdf3;
+  color: var(--master-ink);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  box-shadow: 3px 4px 0 var(--master-shadow);
+}
+
+.fight-sprite.rival p,
+.fight-sprite.rival .fight-head span {
+  transform: scaleX(-1) translateX(50%);
+}
+
+.fight-sprite.rival .fight-head span {
+  transform: scaleX(-1) translateY(16px);
+}
+
+.fight-impact {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 128px;
+  height: 84px;
+  opacity: 0;
+  pointer-events: none;
+  clip-path: polygon(50% 0, 61% 27%, 91% 11%, 73% 40%, 100% 50%, 73% 60%, 91% 89%, 61% 73%, 50% 100%, 39% 73%, 9% 89%, 27% 60%, 0 50%, 27% 40%, 9% 11%, 39% 27%);
+  background: var(--master-yellow);
+  color: var(--master-red);
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 2px 2px 0 #fffdf3;
+  transform: translate(-50%, -50%) scale(0.6) rotate(-8deg);
+}
+
+.fight-impact.show {
+  animation: fightImpact 420ms ease-out;
+}
+
+.fight-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fight-controls button {
+  padding: 11px 16px;
+  border: 3px solid var(--master-ink);
+  border-radius: 999px;
+  background: #fffdf3;
+  color: var(--master-ink);
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 4px 5px 0 var(--master-shadow);
+}
+
+.fight-controls button:nth-child(1) {
+  background: var(--master-red);
+  color: #fffdf3;
+}
+
+.fight-controls button:nth-child(2) {
+  background: #7bdcff;
+}
+
+.fight-controls button:nth-child(3) {
+  background: var(--master-yellow);
+}
+
+.fight-controls button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.fight-log {
+  display: grid;
+  gap: 8px;
+  min-height: 122px;
+  margin: 0;
+  padding: 14px 18px 14px 36px;
+  border: 3px solid var(--master-ink);
+  border-radius: 18px;
+  background: rgba(255, 253, 243, 0.9);
+  box-shadow: 5px 6px 0 var(--master-shadow);
+}
+
+.fight-log li {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+@keyframes fightImpact {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.45) rotate(-14deg); }
+  28% { opacity: 1; transform: translate(-50%, -50%) scale(1.18) rotate(8deg); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.75) rotate(-8deg); }
+}
+
+@keyframes fightWinner {
+  from { transform: translateY(0) rotate(-3deg); }
+  to { transform: translateY(-18px) rotate(5deg); }
+}
+
+@keyframes fightWinnerRival {
+  from { transform: scaleX(-1) translateY(0) rotate(-3deg); }
+  to { transform: scaleX(-1) translateY(-18px) rotate(5deg); }
+}
+
+@media (max-width: 900px) {
+  .fight-game {
+    padding: 16px;
+  }
+
+  .fight-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .fight-roster {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fight-roster::before {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .fight-game {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .fight-topbar {
+    align-items: flex-start;
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .fight-back {
+    padding: 8px 12px;
+  }
+
+  .fight-subtitle {
+    font-size: 12px;
+  }
+
+  .fight-roster {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .fight-scoreboard {
+    grid-template-columns: 1fr;
+  }
+
+  .fight-versus {
+    width: 52px;
+    height: 52px;
+    margin: -6px auto;
+    font-size: 21px;
+  }
+
+  .fight-stage {
+    min-height: 300px;
+    padding: 36px 24px 38px;
+  }
+
+  .fight-sprite {
+    width: 96px;
+    height: 178px;
+    scale: 0.82;
+  }
+
+  .fight-sprite p {
+    font-size: 11px;
+  }
+
+  .fight-controls button {
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fight-health span,
+  .fight-sprite,
+  .fight-impact.show,
+  .fight-sprite.is-winner.player,
+  .fight-sprite.is-winner.rival {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* On a wide screen WhatsApp Web opens shared contacts as a centred dialog
+   over the chat, not as a page; the phone keeps the full screen. */
+@media (min-width: 601px) {
+  .contacts-sheet {
+    background: rgba(17, 27, 33, 0.55);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacts-sheet-bar,
+  .contacts-sheet-list {
+    width: min(480px, calc(100vw - 48px));
+    background: var(--WDS-white);
+  }
+
+  .contacts-sheet-bar {
+    border-radius: 12px 12px 0 0;
+    box-sizing: border-box;
+  }
+
+  .contacts-sheet-list {
+    flex: 0 1 auto;
+    max-height: 70vh;
+    border-radius: 0 0 12px 12px;
+    box-sizing: border-box;
+  }
+
+  .contacts-sheet-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-sheet-back .is-close { display: none; }
+@media (min-width: 601px) {
+  .contacts-sheet-back .is-back { display: none; }
+  .contacts-sheet-back .is-close { display: flex; }
+}

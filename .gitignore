@@ -1,0 +1,26 @@
+node_modules/
+dist/
+.vite/
+*.local
+
+# Generated data (rebuild with npm run split-data / npm run export)
+public/data/
+public/export/
+
+# Reference files (personal images, design refs)
+ref/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+*.swp
+*.swo
+
+# Test
+coverage/
+test-results/
+playwright-report/
+.vercel

@@ -1,0 +1,621 @@
+/* Layout — two-panel conversation structure */
+
+/* Outer wrapper: fullscreen app shell */
+.app-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+/* Green header bar — hidden (fullscreen mode) */
+.app-header-bar {
+  display: none;
+}
+
+/* Main container: sidebar + main area, full viewport */
+.app-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ── Nav Rail (far-left icon bar) ─────────────── */
+.nav-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 64px;
+  min-width: 64px;
+  height: 100%;
+  background-color: var(--WDS-surface-emphasized);
+  border-right: 3px solid var(--master-ink);
+  padding: 12px 0;
+  flex-shrink: 0;
+}
+
+.nav-rail-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.nav-rail-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  transition: background-color 120ms;
+}
+
+.nav-rail-btn:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.nav-rail-btn.active {
+  color: var(--master-ink);
+  background-color: #fffdf3;
+  border-color: var(--master-ink);
+  box-shadow: 3px 3px 0 var(--master-shadow);
+}
+
+.nav-rail-btn.disabled {
+  color: var(--WDS-content-disabled);
+  cursor: default;
+}
+
+.nav-rail-btn.disabled:hover {
+  background: none;
+}
+
+.nav-rail-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-rail-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--WDS-cool-gray-300);
+  border: 2px solid var(--master-ink);
+  box-shadow: 2px 2px 0 var(--master-shadow);
+  cursor: pointer;
+}
+
+.nav-rail-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Sidebar (left panel) ─────────────────────── */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  width: 30%;
+  min-width: 340px;
+  max-width: 500px;
+  background-color: var(--WDS-background-wash-plain);
+  border-right: 3px solid var(--master-ink);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  height: 59px;
+  position: relative;
+  background: linear-gradient(90deg, #fff8dc, #ffe35c 58%, #7bdcff);
+  border-bottom: 3px solid var(--master-ink);
+  flex-shrink: 0;
+}
+
+.sidebar-header-title {
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--master-red);
+  letter-spacing: 0.2px;
+  line-height: 1;
+  text-shadow: 2px 2px 0 #fffdf3, 3px 3px 0 var(--master-ink);
+  flex: 1;
+}
+
+/* The list's own menu, as on WhatsApp Web. Home of "Exportar tudo". */
+.sidebar-menu-btn {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  border-radius: 50%;
+}
+
+.sidebar-menu-btn:hover {
+  background-color: var(--WDS-surface-highlight);
+}
+
+/* Sidebar dropdown menu */
+.sidebar-dropdown-menu {
+  position: absolute;
+  top: 48px;
+  right: 12px;
+  min-width: 200px;
+  padding: 8px 0;
+  background-color: var(--WDS-surface-elevated-default);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .18);
+  z-index: 60;
+}
+
+.sidebar-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--WDS-content-default);
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidebar-dropdown-item:hover:not(.disabled) {
+  background-color: var(--WDS-surface-highlight);
+}
+
+.sidebar-dropdown-item.disabled {
+  color: var(--WDS-content-disabled);
+  cursor: default;
+}
+
+/* Bottom nav — hidden on desktop, shown on mobile */
+.sidebar-bottom-nav {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid var(--WDS-lines-divider);
+  background-color: var(--WDS-background-wash-plain);
+  flex-shrink: 0;
+}
+
+.sidebar-bottom-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 16px;
+  color: var(--WDS-content-deemphasized);
+  font-size: 11px;
+}
+
+.sidebar-bottom-tab.active {
+  color: var(--WDS-accent);
+}
+
+.sidebar-bottom-tab.disabled {
+  color: var(--WDS-content-disabled);
+}
+
+.sidebar-search {
+  padding: 6px 12px;
+  flex-shrink: 0;
+  background-color: var(--WDS-background-wash-plain);
+}
+
+.sidebar-search-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 36px 0 40px;
+  border: 2px solid var(--master-ink);
+  border-radius: 50px;
+  background-color: #fffdf3;
+  color: var(--WDS-content-default);
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.sidebar-search-input::placeholder {
+  color: var(--WDS-content-deemphasized);
+}
+
+.sidebar-search-input:focus {
+  box-shadow: 3px 3px 0 var(--master-shadow);
+  background-color: var(--WDS-background-wash-plain);
+}
+
+.sidebar-search-wrapper {
+  position: relative;
+}
+
+.sidebar-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--WDS-content-deemphasized);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-search-clear:hover {
+  color: var(--WDS-content-default);
+  background-color: var(--WDS-surface-highlight);
+}
+
+.sidebar-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--WDS-content-deemphasized);
+  pointer-events: none;
+}
+
+/* Filter tags */
+.sidebar-tags {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  flex-shrink: 0;
+}
+
+.sidebar-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  border: 2px solid var(--master-ink);
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--WDS-content-default);
+  font-family: inherit;
+  font-size: 13px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.sidebar-tag.active {
+  background-color: var(--master-yellow);
+  color: var(--master-ink);
+  border-color: var(--master-ink);
+  box-shadow: 2px 2px 0 var(--master-shadow);
+  font-weight: 800;
+}
+
+.sidebar-tag.disabled {
+  color: var(--WDS-content-disabled);
+}
+
+.sidebar-tag-count {
+  font-size: 11px;
+}
+
+/* Lock message right after the last conversation item */
+/* Shown when a filter tab leaves the list empty. */
+.sidebar-empty-filter {
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.sidebar-lock-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 14px 12px;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.sidebar-lock-link {
+  color: var(--WDS-accent);
+  cursor: pointer;
+}
+
+.sidebar-lock-link:hover {
+  text-decoration: underline;
+}
+
+/* Conversation list */
+.conversation-list {
+  flex: 1;
+  /* A flex item defaults to min-height:auto, which lets it grow to its content
+     instead of scrolling. Without this the list has no scroll of its own — and
+     since body is overflow:hidden, nothing scrolls at all. */
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 16px;
+  height: 72px;
+  cursor: pointer;
+  transition: background-color 120ms;
+}
+
+/* Hover only where there is a real pointer. On touch, :hover latches onto the
+   last element the finger passed over and never clears — dragging through the
+   list would leave a trail of highlighted rows. */
+@media (hover: hover) and (pointer: fine) {
+  .conversation-item:hover {
+    background-color: var(--WDS-surface-highlight);
+  }
+}
+
+/* Touch gets its feedback from the press itself, which does clear on release. */
+@media (hover: none) {
+  .conversation-item:active {
+    background-color: var(--WDS-surface-highlight);
+  }
+}
+
+.conversation-item.active {
+  background: linear-gradient(90deg, #fff2a8, #e4f7ff);
+}
+
+.conversation-item-avatar {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background-color: var(--WDS-cool-gray-300);
+  border: 2px solid var(--master-ink);
+  box-shadow: 3px 3px 0 var(--master-shadow);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.conversation-item-avatar svg {
+  width: 100%;
+  height: 100%;
+  color: var(--WDS-white);
+}
+
+.conversation-item-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.conversation-item-content {
+  flex: 1;
+  min-width: 0;
+  border-bottom: 1px solid var(--WDS-lines-divider);
+  padding: 13px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.conversation-item-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.conversation-item-name {
+  font-size: 16.5px;
+  color: var(--WDS-content-default);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.conversation-item-time {
+  font-size: 12px;
+  color: var(--WDS-content-deemphasized);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.conversation-item-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.conversation-item-preview {
+  font-size: 13.5px;
+  color: var(--WDS-content-deemphasized);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+
+.conversation-item-unread {
+  font-size: 11px;
+  color: var(--WDS-content-on-accent);
+  background-color: var(--WDS-persistent-activity-indicator);
+  border-radius: 10px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+/* ── Main area (right panel) ──────────────────── */
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  position: relative;
+  background-color: var(--WDS-systems-chat-background-wallpaper);
+}
+
+/* Comic paper overlay: original CSS pattern, no external artwork. */
+.main-area::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20px 18px, rgba(23, 23, 23, 0.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 86px 42px, rgba(227, 59, 47, 0.18) 0 8px, transparent 9px),
+    radial-gradient(circle at 152px 80px, rgba(20, 121, 201, 0.14) 0 10px, transparent 11px),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 243, 163, 0.65));
+  background-repeat: repeat;
+  background-size: 120px 120px, 220px 180px, 260px 210px, cover;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Chat header */
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 10px 16px;
+  height: 59px;
+  background-color: var(--WDS-components-surface-nav-bar);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.chat-header-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--WDS-content-default);
+}
+
+.chat-header-info {
+  font-size: 12.5px;
+  color: var(--WDS-content-deemphasized);
+}
+
+/* Chat message area */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 60px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.empty-state-icon {
+  width: 250px;
+  height: auto;
+  margin-bottom: 28px;
+  opacity: 1;
+  filter: drop-shadow(6px 7px 0 var(--master-shadow));
+}
+
+.empty-state-title {
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--master-red);
+  margin-bottom: 16px;
+  letter-spacing: 0.2px;
+  text-shadow: 2px 2px 0 #fffdf3, 4px 4px 0 var(--master-ink);
+}
+
+.empty-state-text {
+  font-size: 14px;
+  color: var(--WDS-content-deemphasized);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.empty-state-divider {
+  width: 470px;
+  max-width: 100%;
+  height: 1px;
+  background-color: var(--WDS-lines-divider);
+  margin: 40px 0;
+}
+
+.empty-state-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--WDS-content-deemphasized);
+}
+
+.empty-state-footer svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ── Nothing scrolls sideways, ever ────────────────────────────────────────
+   A message wider than the screen is a bug in that message; the page must
+   not make it the reader's problem by letting the whole chat drift. Every
+   layer that could scroll clips horizontally, and a bubble breaks any word. */
+html,
+body,
+.app-wrapper,
+.app-container,
+.main-area,
+.chat-messages {
+  overflow-x: hidden;
+}
+
+.chat-msg-bubble,
+.chat-msg-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

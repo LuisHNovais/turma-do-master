@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Diretor Paulo Sergio Bacen"
+    ],
+    "saved_as": null,
+    "phone": "556192146932",
+    "date_range": {
+      "start": "2025-03-19",
+      "end": "2025-03-19"
+    },
+    "total_messages": 5,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-03-19T19:55:44",
+      "date": "2025-03-19",
+      "time": "19:55:44",
+      "sender": "Paulo Sergio",
+      "content": "Opa. Tudo bem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 177,
+      "source_figure": 180
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-03-19T20:22:41",
+      "date": "2025-03-19",
+      "time": "20:22:41",
+      "sender": "DV",
+      "content": "Tudo e vc",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 177,
+      "source_figure": 180
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-03-19T20:24:20",
+      "date": "2025-03-19",
+      "time": "20:24:20",
+      "sender": "Paulo Sergio",
+      "content": "Chamada de voz — duração 02:49",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 177,
+      "source_figure": 180
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-03-19T20:28:35",
+      "date": "2025-03-19",
+      "time": "20:28:35",
+      "sender": "DV",
+      "content": "To com Moraes aqui rsrs",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 177,
+      "source_figure": 180
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-03-19T20:32:42",
+      "date": "2025-03-19",
+      "time": "20:32:42",
+      "sender": "DV",
+      "content": "Vai chamar paulo pra dar um aperto",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 177,
+      "source_figure": 180
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-03-19",
+        "message_count": 5,
+        "first_message_id": 1,
+        "last_message_id": 5
+      }
+    ]
+  }
+}

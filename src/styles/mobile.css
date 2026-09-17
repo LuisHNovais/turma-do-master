@@ -1,0 +1,163 @@
+/* Mobile responsive — WhatsApp mobile layout */
+
+/* ── Tablet breakpoint (≤ 900px) ─────────────── */
+@media (max-width: 900px) {
+  .sidebar {
+    width: 35%;
+    min-width: 280px;
+  }
+
+  .chat-messages {
+    padding: 8px 16px;
+  }
+}
+
+/* ── Mobile breakpoint (≤ 600px) ─────────────── */
+@media (max-width: 600px) {
+  .app-wrapper {
+    align-items: stretch;
+    min-width: 320px;
+  }
+
+  .app-header-bar {
+    display: none;
+  }
+
+  .nav-rail {
+    display: none;
+  }
+
+  .app-container {
+    flex-direction: column;
+    max-height: 100%;
+    margin: 0;
+    min-width: 320px;
+  }
+
+  /* Full-width sidebar by default */
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    border-right: none;
+    flex: 1;
+    background-color: var(--WDS-background-wash-plain);
+  }
+
+  /* Main area hidden when no conversation is active */
+  .main-area {
+    display: none;
+  }
+
+  /* When a conversation is open, hide sidebar and show main area */
+  .app-container.chat-open .sidebar {
+    display: none;
+  }
+
+  .app-container.chat-open .main-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* Show back button on mobile */
+  .chat-header-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Tighter message padding on mobile */
+  .chat-messages {
+    padding: 6px 12px;
+  }
+
+  /* Wider bubbles on mobile */
+  .chat-msg-bubble {
+    max-width: 85%;
+  }
+
+  /* Media placeholders at 240px on mobile */
+  .chat-media-placeholder {
+    width: 240px;
+    height: auto;
+    min-height: 150px;
+  }
+
+  /* Smaller empty state */
+  .empty-state-title {
+    font-size: 24px;
+  }
+
+  .empty-state-icon {
+    width: 180px;
+  }
+
+  .empty-state-divider {
+    width: 90%;
+  }
+
+  /* Search results full width */
+  .search-results {
+    width: 100%;
+  }
+
+  /* Show bottom nav on mobile */
+  .sidebar-bottom-nav {
+    display: flex;
+  }
+
+  /* Drawer close: arrow on mobile, hide X */
+  .drawer-close-x {
+    display: none;
+  }
+
+  .drawer-close-arrow {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Profile/Settings drawers fullscreen on mobile */
+  .profile-drawer {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    border-right: none !important;
+  }
+}
+
+/* ── Very small screens (≤ 380px) ────────────── */
+@media (max-width: 380px) {
+  .sidebar-header {
+    padding: 8px 12px;
+  }
+
+  .sidebar-search {
+    padding: 4px 8px;
+  }
+
+  .conversation-item {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .conversation-item-avatar {
+    width: 42px;
+    height: 42px;
+  }
+
+  .conversation-item-name {
+    font-size: 15px;
+  }
+
+  .chat-messages {
+    padding: 4px 8px;
+  }
+
+  .chat-msg-bubble {
+    max-width: 90%;
+    font-size: 13.5px;
+  }
+}

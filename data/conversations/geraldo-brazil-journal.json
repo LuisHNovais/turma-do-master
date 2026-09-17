@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Geraldo Brazil Journal"
+    ],
+    "saved_as": null,
+    "phone": "5521991247026",
+    "date_range": {
+      "start": "2024-04-26",
+      "end": "2024-04-26"
+    },
+    "total_messages": 12,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-04-26T14:57:10",
+      "date": "2024-04-26",
+      "time": "14:57:10",
+      "sender": "DV",
+      "content": "Alexandre pediu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-26T14:57:57",
+      "date": "2024-04-26",
+      "time": "14:57:57",
+      "sender": "DV",
+      "content": "se possivel pra incluir que antes do evento ele se reuniu com os ministros do supremo\nToffoli, moraes e gilmar mendes",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-26T14:58:28",
+      "date": "2024-04-26",
+      "time": "14:58:28",
+      "sender": "Geraldo",
+      "content": "No post de ontem?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-26T14:59:15",
+      "date": "2024-04-26",
+      "time": "14:59:15",
+      "sender": "DV",
+      "content": "Nao, Tony blair",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-04-26T14:59:17",
+      "date": "2024-04-26",
+      "time": "14:59:17",
+      "sender": "DV",
+      "content": "Se reuniu",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-04-26T14:59:27",
+      "date": "2024-04-26",
+      "time": "14:59:27",
+      "sender": "DV",
+      "content": "Na materia do Blair que vai soltar",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-04-26T15:01:02",
+      "date": "2024-04-26",
+      "time": "15:01:02",
+      "sender": "Geraldo",
+      "content": "Ahhh, falar que ALEXANDRE SE REUNIU COM BLAIR ?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-04-26T15:01:25",
+      "date": "2024-04-26",
+      "time": "15:01:25",
+      "sender": "Geraldo",
+      "content": "Chamada de voz perdida",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-04-26T15:02:11",
+      "date": "2024-04-26",
+      "time": "15:02:11",
+      "sender": "Geraldo",
+      "content": "Ou TODOS os ministros se reuniram com Blair?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-04-26T15:02:11",
+      "date": "2024-04-26",
+      "time": "15:02:11",
+      "sender": "Geraldo",
+      "content": "Ou que os ministros fizeram uma reuniao entre si ?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-04-26T15:02:21",
+      "date": "2024-04-26",
+      "time": "15:02:21",
+      "sender": "Geraldo",
+      "content": "Não está claro pela tua mensagem",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-04-26T15:03:40",
+      "date": "2024-04-26",
+      "time": "15:03:40",
+      "sender": "DV",
+      "content": "Antes do meu debate com o tony Blair, os 3 ministros do STF se reuniram privadamente com o ex primeiro ministro",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 187,
+      "source_figure": 194
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-04-26",
+        "message_count": 12,
+        "first_message_id": 1,
+        "last_message_id": 12
+      }
+    ]
+  }
+}

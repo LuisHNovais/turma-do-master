@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Gustavo Motorista"
+    ],
+    "saved_as": null,
+    "phone": "5511942328664",
+    "date_range": {
+      "start": "2023-12-21",
+      "end": "2023-12-21"
+    },
+    "total_messages": 6,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2023-12-21T08:16:44",
+      "date": "2023-12-21",
+      "time": "08:16:44",
+      "sender": "DV",
+      "content": "Descendo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 20,
+      "source_figure": 15
+    },
+    {
+      "id": 2,
+      "timestamp": "2023-12-21T10:42:16",
+      "date": "2023-12-21",
+      "time": "10:42:16",
+      "sender": "DV",
+      "content": "Modelo e placa nosso carro",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 20,
+      "source_figure": 15
+    },
+    {
+      "id": 3,
+      "timestamp": "2023-12-21T10:42:52",
+      "date": "2023-12-21",
+      "time": "10:42:52",
+      "sender": "Gustavo Motorista",
+      "content": "Range Rover Vogue\nRSB7C37",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 20,
+      "source_figure": 15
+    },
+    {
+      "id": 4,
+      "timestamp": "2023-12-21T10:46:44",
+      "date": "2023-12-21",
+      "time": "10:46:44",
+      "sender": "DV",
+      "content": "Tucumã 99",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": true,
+      "source_page": 20,
+      "source_figure": 16
+    },
+    {
+      "id": 5,
+      "timestamp": "2023-12-21T10:46:48",
+      "date": "2023-12-21",
+      "time": "10:46:48",
+      "sender": "DV",
+      "content": "Descendo",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 20,
+      "source_figure": 16
+    },
+    {
+      "id": 6,
+      "timestamp": "2023-12-21T10:46:51",
+      "date": "2023-12-21",
+      "time": "10:46:51",
+      "sender": "DV",
+      "content": "Vamos nesse endereço agora",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 20,
+      "source_figure": 16
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2023-12-21",
+        "message_count": 6,
+        "first_message_id": 1,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

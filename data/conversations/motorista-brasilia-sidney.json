@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Motorista Brasilia Sidney"
+    ],
+    "saved_as": null,
+    "phone": "556198436116",
+    "date_range": {
+      "start": "2025-02-26",
+      "end": "2025-02-26"
+    },
+    "total_messages": 8,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-02-26T14:04:54",
+      "date": "2025-02-26",
+      "time": "14:04:54",
+      "sender": "Sidney",
+      "content": "Min Alexandre chegou",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-02-26T18:44:49",
+      "date": "2025-02-26",
+      "time": "18:44:49",
+      "sender": "DV",
+      "content": "Tem convidado na porta sidney",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-02-26T18:44:55",
+      "date": "2025-02-26",
+      "time": "18:44:55",
+      "sender": "DV",
+      "content": "Fiquem atentos ai",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-02-26T18:45:05",
+      "date": "2025-02-26",
+      "time": "18:45:05",
+      "sender": "DV",
+      "content": "Toda vez alguem me liga que ta na porta",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-02-26T18:45:05",
+      "date": "2025-02-26",
+      "time": "18:45:05",
+      "sender": "Sidney",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-02-26T18:46:00",
+      "date": "2025-02-26",
+      "time": "18:46:00",
+      "sender": "Sidney",
+      "content": "Já entraram",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "Toda vez alguem me liga que ta na porta",
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 7,
+      "timestamp": "2025-02-26T18:46:16",
+      "date": "2025-02-26",
+      "time": "18:46:16",
+      "sender": "DV",
+      "content": "Poe na varanda",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    },
+    {
+      "id": 8,
+      "timestamp": "2025-02-26T18:46:23",
+      "date": "2025-02-26",
+      "time": "18:46:23",
+      "sender": "Sidney",
+      "content": "Ok",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 176,
+      "source_figure": 178
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-02-26",
+        "message_count": 8,
+        "first_message_id": 1,
+        "last_message_id": 8
+      }
+    ]
+  }
+}

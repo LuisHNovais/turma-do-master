@@ -1,0 +1,22 @@
+{
+  "name": "A Turma do Master",
+  "short_name": "Turma Master",
+  "description": "Visualizador interativo das 66 mil mensagens dos celulares apreendidos de Daniel Vorcaro, em 24 conversas",
+  "icons": [
+    {
+      "src": "/assets/turma-master-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/turma-master-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#f7d84b",
+  "background_color": "#fff8dc",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "pt-BR"
+}

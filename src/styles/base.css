@@ -1,0 +1,160 @@
+/* Base reset and global styles */
+:root {
+  --master-ink: #171717;
+  --master-paper: #fff8dc;
+  --master-yellow: #f7d84b;
+  --master-red: #e33b2f;
+  --master-blue: #1479c9;
+  --master-green: #1c9f4a;
+  --master-shadow: rgba(23, 23, 23, 0.18);
+  --WDS-accent: var(--master-blue);
+  --WDS-app-wash: #f7d84b;
+  --WDS-background-wash-plain: #fff8dc;
+  --WDS-components-surface-nav-bar: #fff0a8;
+  --WDS-surface-emphasized: #fff0a8;
+  --WDS-surface-highlight: #ffe27a;
+  --WDS-components-active-list-row: #ffeaa0;
+  --WDS-green-50: #e8f8d9;
+  --WDS-systems-chat-background-wallpaper: #ffefad;
+  --WDS-systems-bubble-surface-incoming: #fffdf3;
+  --WDS-systems-bubble-surface-outgoing: #dff5ff;
+  --WDS-systems-bubble-surface-system: #fff3a3;
+  --WDS-lines-divider: rgba(23, 23, 23, 0.18);
+  --WDS-lines-outline-deemphasized: rgba(23, 23, 23, 0.28);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: Nunito, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--WDS-content-default);
+  background:
+    radial-gradient(circle at 16px 18px, rgba(255, 255, 255, 0.55) 0 3px, transparent 4px),
+    linear-gradient(135deg, #ffe35c 0%, #fff2a8 52%, #7bdcff 100%);
+  background-size: 36px 36px, cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+#app {
+  height: 100%;
+}
+
+a {
+  color: var(--WDS-content-external-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--WDS-black-alpha-20);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Thin scrollbar for Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--WDS-black-alpha-20) transparent;
+}
+
+/* Screen reader only — visible to crawlers but hidden visually */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Loading screen ──────────────────────────── */
+#loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background:
+    radial-gradient(circle at 24px 24px, rgba(23, 23, 23, 0.08) 0 3px, transparent 4px),
+    linear-gradient(135deg, #ffe35c, #fff8dc 48%, #7bdcff);
+  background-size: 46px 46px, cover;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.loading-logo {
+  opacity: 1;
+  filter: drop-shadow(4px 5px 0 rgba(23, 23, 23, 0.18));
+}
+
+.loading-text {
+  font-family: 'Baloo 2', Nunito, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--master-ink);
+  letter-spacing: 0.2px;
+}
+
+.loading-bar-track {
+  width: 260px;
+  height: 8px;
+  background-color: #fffdf3;
+  border: 2px solid var(--master-ink);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--master-red), var(--master-yellow), var(--master-blue));
+  border-radius: 999px;
+  animation: loadingProgress 2.5s ease-in-out forwards;
+}
+
+@keyframes loadingProgress {
+  0% { width: 0%; }
+  30% { width: 40%; }
+  60% { width: 70%; }
+  90% { width: 90%; }
+  100% { width: 100%; }
+}
+
+.loading-footer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--master-ink);
+  margin-top: 20px;
+}

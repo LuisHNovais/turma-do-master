@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Ana Claudia Financeiro1"
+    ],
+    "saved_as": null,
+    "phone": "553183288156",
+    "date_range": {
+      "start": "2025-07-24",
+      "end": "2025-07-24"
+    },
+    "total_messages": 4,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-07-24T12:59:21",
+      "date": "2025-07-24",
+      "time": "12:59:21",
+      "sender": "Ana Claudia",
+      "content": "[anexo] Fatura de Prestação de Serviços Nº 01 — BARCI DE MORAES SOCIEDADE DE ADVOGADOS → VIKING PARTICIPAÇOES LTDA; parcelas 01-04 do contrato de 13/05/2025; honorários R$ 24.310.198,13; total líquido R$ 22.815.120,95; vencimento 31/07/2025; assinada por Guilherme de Toledo Benazzi",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "Fatura de Prestação de Serviços Nº 01",
+      "urls": [],
+      "source_page": 170,
+      "source_figure": 169
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-07-24T12:59:28",
+      "date": "2025-07-24",
+      "time": "12:59:28",
+      "sender": "Ana Claudia",
+      "content": "Boa tarde",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 170,
+      "source_figure": 169
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-07-24T12:59:42",
+      "date": "2025-07-24",
+      "time": "12:59:42",
+      "sender": "Ana Claudia",
+      "content": "Palhares está pedindo para pagar essa fatura",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 170,
+      "source_figure": 169
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-07-24T12:59:47",
+      "date": "2025-07-24",
+      "time": "12:59:47",
+      "sender": "Ana Claudia",
+      "content": "Disse que é prioridade",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 170,
+      "source_figure": 169
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-07-24",
+        "message_count": 4,
+        "first_message_id": 1,
+        "last_message_id": 4
+      }
+    ]
+  }
+}

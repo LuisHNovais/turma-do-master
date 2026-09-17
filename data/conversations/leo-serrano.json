@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Leandro Serrano Giunchetti"
+    ],
+    "saved_as": "Leo Serrano Giunchetti",
+    "phone": "5511969204644",
+    "date_range": {
+      "start": "2024-04-10",
+      "end": "2024-04-10"
+    },
+    "total_messages": 4,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-04-10T12:59:27",
+      "date": "2024-04-10",
+      "time": "12:59:27",
+      "sender": "Leo Serrano",
+      "content": "Vai me dando umas respostas….pq como é primeira vez que faço Evento pra vc mais \"coorporativo\" e envolve esse bando de gente importante e sensivel…..nao quero ir tomando todas decisões sozinho nao kkkkkkkk",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 184,
+      "source_figure": 190
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-04-10T13:00:01",
+      "date": "2024-04-10",
+      "time": "13:00:01",
+      "sender": "Leo Serrano",
+      "content": "Qnd é Evento so seu de diversao é mais facil eu me arriscar sozinho…..",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 184,
+      "source_figure": 190
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-04-10T13:02:31",
+      "date": "2024-04-10",
+      "time": "13:02:31",
+      "sender": "Leo Serrano",
+      "content": "Vamos considerar 2 casais (ou 4 pax) por V-Class a disposição….",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 184,
+      "source_figure": 190
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-04-10T13:04:59",
+      "date": "2024-04-10",
+      "time": "13:04:59",
+      "sender": "Leo Serrano",
+      "content": "E os ministros mais sensiveis tipo Alexandre, Tofolli, etc um casal por S-Class….sao uns 4-5 ministros que terao S-Class por casal…",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 184,
+      "source_figure": 190
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-04-10",
+        "message_count": 4,
+        "first_message_id": 1,
+        "last_message_id": 4
+      }
+    ]
+  }
+}

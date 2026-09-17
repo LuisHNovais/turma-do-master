@@ -1,0 +1,52 @@
+import { test, expect } from '@playwright/test';
+
+test.describe('Chat List — Batch 3', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/');
+  });
+
+  test('conversation item displays unread badge', async ({ page }) => {
+    const badge = page.locator('.conversation-item-unread').first();
+    await expect(badge).toBeVisible();
+  });
+
+  test('conversation item shows relative date', async ({ page }) => {
+    const time = page.locator('.conversation-item-time').first();
+    await expect(time).toBeVisible();
+    // Should show a date (not a time like "23:27")
+    const text = await time.textContent();
+    expect(text.length).toBeGreaterThan(0);
+  });
+
+  test('conversation item shows last message preview', async ({ page }) => {
+    const preview = page.locator('.conversation-item-preview').first();
+    await expect(preview).toBeVisible();
+    const text = await preview.textContent();
+    expect(text.length).toBeGreaterThan(0);
+  });
+
+  test('conversation item has avatar', async ({ page }) => {
+    const avatar = page.locator('.conversation-item-avatar').first();
+    await expect(avatar).toBeVisible();
+    // Contains either an img (real avatar) or svg (default)
+    const img = avatar.locator('img');
+    const svg = avatar.locator('svg');
+    const hasImg = await img.count() > 0;
+    const hasSvg = await svg.count() > 0;
+    expect(hasImg || hasSvg).toBe(true);
+  });
+
+  test('data loads from conversations.json', async ({ page }) => {
+    // Verify the fetch happened by checking a known conversation is rendered
+    const item = page.locator('.conversation-item[data-id="martha-graeff"]');
+    await expect(item.locator('.conversation-item-name')).toHaveText('Martha Graeff');
+  });
+
+  test('conversation list is scrollable when content overflows', async ({ page }) => {
+    const list = page.locator('.conversation-list');
+    const overflow = await list.evaluate(el =>
+      window.getComputedStyle(el).overflowY
+    );
+    expect(overflow).toBe('auto');
+  });
+});

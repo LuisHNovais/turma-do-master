@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Fabiano Zettel 1"
+    ],
+    "saved_as": null,
+    "phone": "5511932611111",
+    "date_range": {
+      "start": "2024-02-08",
+      "end": "2024-02-08"
+    },
+    "total_messages": 14,
+    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-02-08T12:20:57",
+      "date": "2024-02-08",
+      "time": "12:20:57",
+      "sender": "DV",
+      "content": "Me manda contrato barci moraes assinado?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-02-08T12:21:03",
+      "date": "2024-02-08",
+      "time": "12:21:03",
+      "sender": "DV",
+      "content": "Quando era o primeiro pgto?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-02-08T12:25:59",
+      "date": "2024-02-08",
+      "time": "12:25:59",
+      "sender": "Fabiano Zettel",
+      "content": "[anexo] BARCI DE MORAES - CONTRATO BANCOMASTER_FINAL",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "BARCI DE MORAES - CONTRATO BANCOMASTER_FINAL",
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-02-08T12:26:40",
+      "date": "2024-02-08",
+      "time": "12:26:40",
+      "sender": "Fabiano Zettel",
+      "content": "Até o 5 dia útil.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-02-08T12:26:57",
+      "date": "2024-02-08",
+      "time": "12:26:57",
+      "sender": "DV",
+      "content": "Entao ja passou",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-02-08T12:27:00",
+      "date": "2024-02-08",
+      "time": "12:27:00",
+      "sender": "DV",
+      "content": "Nao foi feito?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 7,
+      "timestamp": "2024-02-08T12:27:04",
+      "date": "2024-02-08",
+      "time": "12:27:04",
+      "sender": "Fabiano Zettel",
+      "content": "Ontem, no caso.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 8,
+      "timestamp": "2024-02-08T12:27:08",
+      "date": "2024-02-08",
+      "time": "12:27:08",
+      "sender": "DV",
+      "content": "Qual os dados da conta",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 9,
+      "timestamp": "2024-02-08T12:27:16",
+      "date": "2024-02-08",
+      "time": "12:27:16",
+      "sender": "Fabiano Zettel",
+      "content": "Vou pegar.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-02-08T12:27:22",
+      "date": "2024-02-08",
+      "time": "12:27:22",
+      "sender": "Fabiano Zettel",
+      "content": "É o Banco que paga.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-02-08T12:28:24",
+      "date": "2024-02-08",
+      "time": "12:28:24",
+      "sender": "Fabiano Zettel",
+      "content": "Banco Itaú S.A,\nnº 05760-0,\nagência 2000",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-02-08T12:28:31",
+      "date": "2024-02-08",
+      "time": "12:28:31",
+      "sender": "DV",
+      "content": "Confirma c angelo se nao foi pago",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 13,
+      "timestamp": "2024-02-08T12:28:36",
+      "date": "2024-02-08",
+      "time": "12:28:36",
+      "sender": "Fabiano Zettel",
+      "content": "Agora.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 149,
+      "source_figure": 148
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-02-08T12:44:23",
+      "date": "2024-02-08",
+      "time": "12:44:23",
+      "sender": "Fabiano Zettel",
+      "content": "Ta no fluxo de pagamento para hj.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": true,
+      "source_page": 149,
+      "source_figure": 148
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-02-08",
+        "message_count": 14,
+        "first_message_id": 1,
+        "last_message_id": 14
+      }
+    ]
+  }
+}
