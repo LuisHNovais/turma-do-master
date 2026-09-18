@@ -52,7 +52,37 @@ export const PEOPLE = [
     slug: 'jair-bolsonaro',
     name: 'Jair Bolsonaro',
     role: 'Ex-presidente da República',
-    aliases: [{ match: 'bolsonaro' }],
+    aliases: [{ match: 'bolsonaro', only: ['martha-graeff'] }],
+  },
+  {
+    slug: 'flavio-bolsonaro',
+    name: 'Flávio Bolsonaro',
+    role: 'Senador da República',
+    profile: 'flavio-bolsonaro',
+    aliases: [
+      { match: 'flavio bolsonaro', only: ['thiago-miranda-leo-dias'] },
+      { match: 'flavio b', only: ['thiago-miranda-leo-dias'] },
+      { match: 'flavio', only: ['thiago-miranda-leo-dias'] },
+    ],
+  },
+  {
+    slug: 'eduardo-bolsonaro',
+    name: 'Eduardo Bolsonaro',
+    role: 'Deputado federal',
+    aliases: [
+      { match: 'eduardo bolsonaro', only: ['thiago-miranda-leo-dias'] },
+      { match: 'eduardo', only: ['thiago-miranda-leo-dias'] },
+    ],
+  },
+  {
+    slug: 'mario-frias',
+    name: 'Mário Frias',
+    role: 'Deputado federal',
+    profile: 'mario-frias',
+    aliases: [
+      { match: 'mario frias', only: ['thiago-miranda-leo-dias'] },
+      { match: 'mario', only: ['thiago-miranda-leo-dias'] },
+    ],
   },
   {
     slug: 'gilmar-mendes',

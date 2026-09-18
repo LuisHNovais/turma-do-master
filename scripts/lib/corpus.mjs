@@ -41,7 +41,7 @@ export function loadMessages(entry) {
  * split-data.mjs computed them once.
  */
 export function sourceOf(entry) {
-  if (entry.source?.startsWith('IPJ-A')) {
+  if (entry.source?.startsWith('IPJ-A') || entry.source?.includes('(IPJ-A)')) {
     const doc = entry.source_document || {};
     return {
       kind: 'police-report',

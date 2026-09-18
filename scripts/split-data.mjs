@@ -46,8 +46,24 @@ function loadExtraConversations() {
     .map((name) => {
       const payload = readJson(join(CONVERSATIONS_DIR, name));
       console.log(`Loading conversations/${name}...`);
-      return [name.replace(/\.json$/, ''), payload, payload.index];
+      return [name.replace(/\.json$/, ''), payload, payload.index || buildIndex(payload.messages)];
     });
+}
+
+function buildIndex(messages) {
+  const byDate = new Map();
+  for (const msg of messages) {
+    if (!byDate.has(msg.date)) byDate.set(msg.date, []);
+    byDate.get(msg.date).push(msg);
+  }
+  return {
+    dates: [...byDate.entries()].sort(([a], [b]) => a.localeCompare(b)).map(([date, rows]) => ({
+      date,
+      message_count: rows.length,
+      first_message_id: rows[0].id,
+      last_message_id: rows.at(-1).id,
+    })),
+  };
 }
 
 function getConversationId(metadata) {

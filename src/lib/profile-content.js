@@ -206,6 +206,51 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'fabiano-zettel-filme': {
+    about: 'Via entre',
+    sections: [{
+      title: 'Fabiano Zettel',
+      paragraphs: [
+        { text: 'Empresário e cunhado de Daniel Vorcaro. Nesta nova IPJ-A, aparece na articulação operacional dos pagamentos do filme, depois que Vorcaro pede a Thiago Miranda o contato do advogado que tocaria o contrato.' },
+        { text: 'O trecho mostra Vorcaro cobrando se o filme havia sido pago — "{Esse e o mais importante disparado}[action:search@fabiano-zettel-filme:mais importante disparado]" — e, dias depois, orientando que o pagamento fosse feito "{via entre}[action:search@fabiano-zettel-filme:via entre]". Zettel responde que o destinatário no exterior era "{um fundo}[action:search@fabiano-zettel-filme:Um fundo]" e depois encaminha o comprovante da remessa para a Havengate, marcando: "{Filme!}[action:search@fabiano-zettel-filme:Filme!]".' },
+      ],
+    }],
+  },
+
+  'thiago-miranda-leo-dias': {
+    about: 'Portal Leo Dias',
+    sections: [{
+      title: 'Thiago Miranda',
+      paragraphs: [
+        { text: 'Thiago Miranda Silva é identificado pela PF como fundador e sócio do {Portal Leo Dias}[https://portalleodias.com/]. No celular de Vorcaro, o contato estava salvo como "Thiago Miranda - Leo Dias".' },
+        { text: 'É ele quem abre a negociação do "{filme do presidente}[action:search@thiago-miranda-leo-dias:filme do presidente]", marca o primeiro encontro com Flávio Bolsonaro, encaminha o acordo de financiamento e, ao longo de 2025, cobra parcelas atrasadas. Em agosto, envia a planilha "{Funding Schedule}[action:search@thiago-miranda-leo-dias:Funding Schedule]"; em novembro, resume a pressão: "{Pessoal está desesperado lá}[action:search@thiago-miranda-leo-dias:Pessoal está desesperado]".' },
+      ],
+    }],
+  },
+
+  'flavio-bolsonaro': {
+    about: 'Dark Horse',
+    sections: [{
+      title: 'Flávio Bolsonaro',
+      paragraphs: [
+        { text: 'Senador pelo Rio de Janeiro e filho do ex-presidente Jair Bolsonaro. Na IPJ-A nº 270/2026, aparece nas mensagens sobre o financiamento e a produção do filme "Dark Horse".' },
+        { text: 'A conversa direta começa com uma provável agenda presencial — "{A caminho}[action:search@flavio-bolsonaro:A caminho]" — e passa por cobranças dos pagamentos em atraso. Em áudio transcrito no relatório, Flávio cita Jim Caviezel e Cyrus e diz temer um calote: "{a gente não pode vacilar}[action:search@flavio-bolsonaro:não pode vacilar]". Em outubro, escreve que as gravações estavam "{no limite}[action:search@flavio-bolsonaro:no limite]".' },
+        { text: 'As últimas mensagens são de 16 de novembro de 2025, véspera da prisão de Vorcaro. Flávio envia duas imagens de visualização única e depois escreve: "{estou e estarei contigo sempre}[action:search@flavio-bolsonaro:estarei contigo]".' },
+      ],
+    }],
+  },
+
+  'mario-frias': {
+    about: 'Idealizador do projeto',
+    sections: [{
+      title: 'Mário Frias',
+      paragraphs: [
+        { text: 'Deputado federal por São Paulo, ator e ex-secretário especial da Cultura. Na IPJ-A nº 270/2026, aparece como o idealizador do projeto do filme citado nas conversas.' },
+        { text: 'A conversa reproduzida é curta: depois da reunião de 11 de dezembro de 2024, Mário Frias envia um áudio agradecendo a Vorcaro e diz que o filme iria mexer com o "{coração de muita gente}[action:search@mario-frias:coração de muita gente]".' },
+      ],
+    }],
+  },
+
   'diretor-paulo-sergio-bacen': {
     about: 'Ex-diretor de Fiscalização do BC',
     sections: [{
