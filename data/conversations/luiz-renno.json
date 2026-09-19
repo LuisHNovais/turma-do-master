@@ -8,11 +8,11 @@
     "phone": "553186058949",
     "date_range": {
       "start": "2024-04-19",
-      "end": "2024-04-19"
+      "end": "2024-08-13"
     },
-    "total_messages": 9,
-    "source": "IPJ-A nº 3298613/2026 — NADIP/DFIN/CGRC/DICOR/PF",
-    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+    "total_messages": 17,
+    "source": "Informações de Polícia Judiciária de Análise (IPJ-A) nº 3298613/2026 e nº 1287197/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados em relatórios policiais — a conversa completa não consta dos documentos."
   },
   "messages": [
     {
@@ -140,6 +140,121 @@
       "urls": [],
       "source_page": 185,
       "source_figure": 191
+    },
+    {
+      "id": 10,
+      "timestamp": "2024-08-13T20:46:32",
+      "date": "2024-08-13",
+      "time": "20:46:32",
+      "sender": "DV",
+      "content": "[anexo] https://legis.senado.leg.br/sdleg-getter/documento?dm=9774194&ts=1723583981274&disposition=inline&ts=1723583981274",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "Emenda nº 11 à PEC 65/2023",
+      "urls": [
+        "https://legis.senado.leg.br/sdleg-getter/documento?dm=9774194&ts=1723583981274&disposition=inline&ts=1723583981274"
+      ],
+      "forwarded": true,
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 11,
+      "timestamp": "2024-08-13T20:46:37",
+      "date": "2024-08-13",
+      "time": "20:46:37",
+      "sender": "DV",
+      "content": "Pensa numa hecatombe",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 12,
+      "timestamp": "2024-08-13T20:56:15",
+      "date": "2024-08-13",
+      "time": "20:56:15",
+      "sender": "Luiz Rennó",
+      "content": "Vc vai fazer passar isso?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 13,
+      "timestamp": "2024-08-13T20:58:43",
+      "date": "2024-08-13",
+      "time": "20:58:43",
+      "sender": "DV",
+      "content": "🙏",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 14,
+      "timestamp": "2024-08-13T20:58:50",
+      "date": "2024-08-13",
+      "time": "20:58:50",
+      "sender": "DV",
+      "content": "Nego ta louco ja",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 15,
+      "timestamp": "2024-08-13T20:58:54",
+      "date": "2024-08-13",
+      "time": "20:58:54",
+      "sender": "Luiz Rennó",
+      "content": "Amigo,",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 16,
+      "timestamp": "2024-08-13T20:58:57",
+      "date": "2024-08-13",
+      "time": "20:58:57",
+      "sender": "DV",
+      "content": "Fgc me ligando kkk",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
+    },
+    {
+      "id": 17,
+      "timestamp": "2024-08-13T20:59:06",
+      "date": "2024-08-13",
+      "time": "20:59:06",
+      "sender": "Luiz Rennó",
+      "content": "Vc sextuplica seu negócio",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 16,
+      "source_figure": 13
     }
   ],
   "index": {
@@ -149,6 +264,12 @@
         "message_count": 9,
         "first_message_id": 1,
         "last_message_id": 9
+      },
+      {
+        "date": "2024-08-13",
+        "message_count": 8,
+        "first_message_id": 10,
+        "last_message_id": 17
       }
     ]
   }

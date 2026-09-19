@@ -112,6 +112,6 @@ export const PEOPLE = [
     slug: 'ciro-nogueira',
     name: 'Ciro Nogueira',
     role: 'Senador, ex-ministro da Casa Civil',
-    aliases: [{ match: 'ciro nogueira' }, { match: 'ciro', only: ['martha-graeff'] }],
+    aliases: [{ match: 'ciro nogueira' }, { match: 'ciro', only: ['martha-graeff', 'andre-banco-master'] }],
   },
 ];

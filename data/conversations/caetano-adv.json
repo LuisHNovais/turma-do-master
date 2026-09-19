@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Caetano Adv"
+    ],
+    "saved_as": "Caetano Adv",
+    "phone": "553192968687",
+    "date_range": {
+      "start": "2024-08-06",
+      "end": "2024-08-13"
+    },
+    "total_messages": 6,
+    "source": "Informação de Polícia Judiciária de Análise (IPJ-A) nº 1287197/2026 — NADIP/DFIN/CGRC/DICOR/PF",
+    "note": "Trechos citados no relatório policial — a conversa completa não consta do documento."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-08-06T11:14:49",
+      "date": "2024-08-06",
+      "time": "11:14:49",
+      "sender": "Caetano Adv",
+      "content": "Bom dia",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 18,
+      "source_figure": 16
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-08-06T11:15:01",
+      "date": "2024-08-06",
+      "time": "11:15:01",
+      "sender": "Caetano Adv",
+      "content": "Horario p/hj no Bco?",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 18,
+      "source_figure": 16
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-08-06T17:02:37",
+      "date": "2024-08-06",
+      "time": "17:02:37",
+      "sender": "Caetano Adv",
+      "content": "[anexo] PEC FGC",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "PEC FGC",
+      "urls": [],
+      "source_page": 18,
+      "source_figure": 16
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-08-12T12:42:09",
+      "date": "2024-08-12",
+      "time": "12:42:09",
+      "sender": "DV",
+      "content": "Chamada de voz — duração 03:05",
+      "type": "call",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 18,
+      "source_figure": 16
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-08-13T19:55:38",
+      "date": "2024-08-13",
+      "time": "19:55:38",
+      "sender": "DV",
+      "content": "[anexo] DOC-EMENDA-11---PEC-652023-20240813",
+      "type": "document",
+      "is_edited": false,
+      "attachment": "DOC-EMENDA-11---PEC-652023-20240813",
+      "urls": [],
+      "source_page": 18,
+      "source_figure": 16
+    },
+    {
+      "id": 6,
+      "timestamp": "2024-08-13T19:55:59",
+      "date": "2024-08-13",
+      "time": "19:55:59",
+      "sender": "DV",
+      "content": "🙏",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "source_page": 18,
+      "source_figure": 16
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-08-06",
+        "message_count": 3,
+        "first_message_id": 1,
+        "last_message_id": 3
+      },
+      {
+        "date": "2024-08-12",
+        "message_count": 1,
+        "first_message_id": 4,
+        "last_message_id": 4
+      },
+      {
+        "date": "2024-08-13",
+        "message_count": 2,
+        "first_message_id": 5,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

@@ -258,7 +258,8 @@ export const OTHER_PROFILES = {
       paragraphs: [
         { text: 'Economista, foi {diretor de Fiscalização do Banco Central}[https://timesbrasil.com.br/empresas-e-negocios/quem-e-paulo-sergio-neves-souza-ex-diretor-banco-central-preso-caso-master/] entre 2019 e 2023, na gestão de Roberto Campos Neto. Foi ele quem assinou a autorização para Vorcaro comprar o Banco Máxima — a operação que deu origem ao Banco Master.' },
         { text: 'Depois de deixar o BC, virou alvo da própria Compliance Zero: a PF apura {se atuava como consultor informal do banqueiro}[https://www.infomoney.com.br/brasil/ex-diretor-do-bc-e-alvo-da-pf-em-mesma-operacao-que-prendeu-vorcaro/], repassando informações sobre fiscalizações e procedimentos internos do órgão que regulava o Master. Foi preso e afastado por decisão do ministro André Mendonça.' },
-        { text: 'O trecho no relatório é de 19 de março de 2025, num único dia: depois de uma ligação, Vorcaro escreve "{To com Moraes aqui rsrs}[action:search@diretor-paulo-sergio-bacen:Moraes aqui]". Na mesma noite dizia a {Martha Graeff}[action:contact:martha-graeff] a mesma coisa — "To com mi jstro aqui".' },
+        { text: 'Em agosto de 2024, a IPJ-A nº 1287197/2026 mostra Paulo Sérgio encaminhando a Vorcaro a emenda da PEC 65/2023 e dizendo: "{Mercado colocando a conta dessa MP em você}[action:search@diretor-paulo-sergio-bacen:Mercado colocando]". Vorcaro rebate que era uma emenda sobre o FGC, reclama de uma "{agencia chamada Ovo}[action:search@diretor-paulo-sergio-bacen:agencia chamada Ovo]" e diz que a Folha soltaria a matéria na semana seguinte.' },
+        { text: 'Em março de 2025, no relatório principal, depois de uma ligação, Vorcaro escreve "{To com Moraes aqui rsrs}[action:search@diretor-paulo-sergio-bacen:Moraes aqui]". Na mesma noite dizia a {Martha Graeff}[action:contact:martha-graeff] a mesma coisa — "To com mi jstro aqui".' },
       ],
     }],
   },
@@ -371,14 +372,38 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'andre-banco-master': {
+    about: 'PEC 65/2023',
+    sections: [{
+      title: 'André Kruschewsky Lima',
+      paragraphs: [
+        { text: 'Advogado baiano identificado na IPJ-A nº 1287197/2026. No celular de Vorcaro, o contato estava salvo como "Andre Banco Master".' },
+        { text: 'O trecho é de 13 de agosto de 2024, dia da apresentação da Emenda nº 11 à PEC 65/2023. Vorcaro pergunta "{Como ficou a versão final fgc?}[action:search@andre-banco-master:versão final fgc]", recebe versões do texto e pede a entrega física do envelope no Lago Sul, com destinatário "{Para : ciro}[action:search@andre-banco-master:Para : ciro]".' },
+        { text: 'À noite, depois de encaminhar a emenda assinada eletronicamente, Vorcaro resume o efeito esperado: "{Vai ser hecatombe}[action:search@andre-banco-master:Vai ser hecatombe]". O relatório compara o arquivo enviado no chat com o documento protocolado no Senado.' },
+      ],
+    }],
+  },
+
+  'caetano-adv': {
+    about: 'PEC FGC',
+    sections: [{
+      title: 'Caetano Adv',
+      paragraphs: [
+        { text: 'Contato salvo como "Caetano Adv" no celular de Vorcaro. A IPJ-A nº 1287197/2026 não o identifica nominalmente além do nome salvo e do número de telefone.' },
+        { text: 'Em 6 de agosto de 2024, dias antes da apresentação da Emenda nº 11 à PEC 65/2023, ele envia a Vorcaro uma minuta chamada "{PEC FGC}[action:search@caetano-adv:PEC FGC]". Após uma chamada de voz em 12 de agosto, Vorcaro responde no dia seguinte com o arquivo "{DOC-EMENDA-11}[action:search@caetano-adv:DOC-EMENDA-11]" já acompanhado de um emoji.' },
+      ],
+    }],
+  },
+
   'luiz-renno': {
-    about: 'Estamos mantendo reservado',
+    about: 'Hecatombe',
     sections: [{
       title: 'Luiz Rennó',
       paragraphs: [
-        { text: 'Empresário mineiro do círculo de Vorcaro. Aparece uma única vez no relatório, em 19 de abril de 2024, mas o trecho é dos mais diretos sobre como o fórum de Londres era vendido.' },
+        { text: 'Empresário mineiro do círculo de Vorcaro. Aparece em dois relatórios: primeiro no fórum de Londres, depois nas mensagens sobre a Emenda nº 11 à PEC 65/2023.' },
         { text: 'Vorcaro oferece a ida a ele e a um sócio: "{Semana que vem estou fazendo um evento super exclusivo com alexandre de moraes em londres}[action:search@luiz-renno:super exclusivo]". Manda o convite digital do Grupo Voto e pede discrição — "{Pede pra ele nao passar adiante}[action:search@luiz-renno:passar adiante]. Estamos mantendo reservado".' },
         { text: 'E explica o critério de quem entra: "{Concorrente dele nao vai pq nao se da c alexandre}[action:search@luiz-renno:Concorrente dele]". O evento foi {financiado pelo Banco Master}[https://www.poder360.com.br/poder-justica/vorcaro-do-banco-master-financiou-eventos-com-ministros-do-stf/] sem aparecer como realizador.' },
+        { text: 'Em agosto de 2024, Vorcaro encaminha a emenda ao Senado e avisa: "{Pensa numa hecatombe}[action:search@luiz-renno:Pensa numa hecatombe]". Rennó pergunta se ele iria "{fazer passar isso}[action:search@luiz-renno:fazer passar isso]" e conclui: "{Vc sextuplica seu negócio}[action:search@luiz-renno:sextuplica]".' },
       ],
     }],
   },
