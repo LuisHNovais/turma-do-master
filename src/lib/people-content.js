@@ -114,4 +114,16 @@ export const PEOPLE = [
     role: 'Senador, ex-ministro da Casa Civil',
     aliases: [{ match: 'ciro nogueira' }, { match: 'ciro', only: ['martha-graeff', 'andre-banco-master'] }],
   },
+  {
+    slug: 'luiz-inacio-lula-da-silva',
+    name: 'Luiz Inácio Lula da Silva',
+    role: 'Presidente da República',
+    aliases: [{ match: 'lula', only: ['walfrido-warde'] }],
+  },
+  {
+    slug: 'jaques-wagner',
+    name: 'Jaques Wagner',
+    role: 'Senador pelo PT-BA',
+    aliases: [{ match: 'jaques', only: ['walfrido-warde'] }],
+  },
 ];

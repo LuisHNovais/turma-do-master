@@ -229,6 +229,18 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'walfrido-warde': {
+    about: 'Walfrido Warde New',
+    sections: [{
+      title: 'Walfrido Warde',
+      paragraphs: [
+        { text: 'Advogado empresarial, Walfrido Warde atuou na defesa de Daniel Vorcaro no caso Banco Master. A conversa foi publicada pela {InfoMoney/Agência O Globo}[https://www.infomoney.com.br/politica/mensagens-mostram-advogado-articulando-aproximacao-vorcaro-com-governo-lula/], que afirmou que as mensagens foram extraídas pela Polícia Federal do celular do banqueiro.' },
+        { text: 'Nas capturas com horário visível, Warde relata articulações políticas: em setembro de 2024 diz ter estado "{com o Presidente Lula longamente}[action:search@walfrido-warde:Presidente Lula longamente]"; em dezembro, no dia do encontro não registrado na agenda oficial, escreve "{Soube que foi muito bom}[action:search@walfrido-warde:Soube que foi muito bom]" e depois brinca que lhe diziam que eles eram "{muitos extravagantes}[action:search@walfrido-warde:muitos extravagantes]".' },
+        { text: 'Em março de 2025, encaminha uma mensagem segundo a qual o "Pr" aceitava receber Vorcaro de novo, mas queria incluir {Jaques Wagner}[action:search@walfrido-warde:Jaques p participar]. A reportagem também cita outros trechos sobre Marcola, Gleisi Hoffmann e Aloizio Mercadante, mas sem horário exato nas mensagens; por isso eles ficaram fora da conversa estruturada.' },
+      ],
+    }],
+  },
+
   'flavio-bolsonaro': {
     about: 'Dark Horse',
     sections: [{

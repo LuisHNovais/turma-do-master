@@ -217,7 +217,7 @@ function splitConversation(conversationId, data, index) {
     } : null,
   };
 
-  for (const key of ['phone', 'saved_as', 'source', 'note']) {
+  for (const key of ['phone', 'saved_as', 'source', 'source_kind', 'source_url', 'source_how', 'source_made_public', 'note']) {
     if (metadata[key]) entry[key] = metadata[key];
   }
   if (String(metadata.source || '').startsWith('IPJ-A') && reportDocument) {

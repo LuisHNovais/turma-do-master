@@ -125,6 +125,7 @@ function conversationMarkdown(entry, messages, { standalone = true, month = null
   out.push(`${sub} Proveniência`, '', '| | |', '|---|---|');
   out.push(`| Fonte | ${source.label} |`);
   if (source.document) out.push(`| Documento | \`${source.document}\`${source.document_pages ? `, ${source.document_pages} páginas` : ''}${source.document_url ? ` — [no repositório](${source.document_url})` : ''} (sha256 \`${source.document_sha256 || 'n/d'}\`) |`);
+  if (!source.document && source.document_url) out.push(`| Link | [abrir fonte](${source.document_url}) |`);
   out.push(`| Como chegou ao público | ${source.how} |`);
   out.push(`| Período | ${month ? `${messages[0].date} a ${messages.at(-1).date}` : `${entry.date_range.start} a ${entry.date_range.end}`} |`);
   out.push(`| Mensagens | ${month ? `${messages.length} (de ${entry.total_messages} na conversa)` : entry.total_messages} |`);
