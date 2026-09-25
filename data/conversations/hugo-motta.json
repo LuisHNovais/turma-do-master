@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Hugo Motta"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2025-07-17",
+      "end": "2025-07-17"
+    },
+    "total_messages": 6,
+    "source": "Capturas de tela fornecidas pelo usuário",
+    "source_kind": "user-screenshot",
+    "source_how": "Transcrição manual das capturas de tela anexadas pelo usuário nesta sessão.",
+    "note": "Trecho visível na captura; a conversa completa não consta do material. DV foi tratado como Daniel Vorcaro."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2025-07-17T20:55:00",
+      "date": "2025-07-17",
+      "time": "20:55:00",
+      "sender": "DV",
+      "content": "Ainda nao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2025-07-17T20:55:05",
+      "date": "2025-07-17",
+      "time": "20:55:05",
+      "sender": "DV",
+      "content": "Perguntei davi mas ele tb nao sabe",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2025-07-17T20:56:00",
+      "date": "2025-07-17",
+      "time": "20:56:00",
+      "sender": "Hugo Motta",
+      "content": "Galípolo ficou de ir lá para casa de Davi quando encerrasse a reunião.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "DV: Perguntei davi mas ele tb nao sabe"
+    },
+    {
+      "id": 4,
+      "timestamp": "2025-07-17T20:56:05",
+      "date": "2025-07-17",
+      "time": "20:56:05",
+      "sender": "Hugo Motta",
+      "content": "Eu tava decolando quando Davi me ligou para dizer isso.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2025-07-17T20:56:10",
+      "date": "2025-07-17",
+      "time": "20:56:10",
+      "sender": "DV",
+      "content": "Sim, parece que ainda ta em reunião 😂",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2025-07-17T20:57:00",
+      "date": "2025-07-17",
+      "time": "20:57:00",
+      "sender": "Hugo Motta",
+      "content": "Ele disse tbm que seria uma reunião demorada.",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "DV: Sim, parece que ainda ta em reunião"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2025-07-17",
+        "message_count": 6,
+        "first_message_id": 1,
+        "last_message_id": 6
+      }
+    ]
+  }
+}

@@ -10,7 +10,7 @@ São **66.387 mensagens** dos celulares apreendidos de Daniel Vorcaro (Banco Mas
 
 ---
 
-Projeto original de **[Rafael Bressan](https://linkedin.com/in/rafaelbressan)**. Adaptado e reimaginado por **[Luis Henrique](http://linkedin.com/in/luisnovaisg/)** com **ChatGPT 5.5**.
+Dados iniciais juntados de Rafael Bressan, posteriormente modificados, atualizados e acrescentados por **[Luis Henrique](http://linkedin.com/in/luisnovaisg/)** usando **ChatGPT 5.5**.
 
 Este repositório se chama `turma-do-master`. A ideia original veio do [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) de **Lucas Matheus**, feito no Replit com Grok. A Turma do Master parte dessa inspiração e troca a cara, a stack e o jeito de ler o material.
 
@@ -115,6 +115,6 @@ Tudo aqui é público: reportagem, documento com sigilo levantado, fonte aberta.
 
 **A Turma do Master** is a comic-styled viewer for 66,387 WhatsApp messages from Daniel Vorcaro’s seized phones — 24 chats, from Martha Graeff to Justice Alexandre de Moraes. Vanilla JS, Vite, Node scripts. Search, calendar jump, permalink to a single bubble, profiles, export.
 
-This repo is `turma-do-master`. It was inspired by the original [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) by **Lucas Matheus** (Replit + Grok). This version was created by **[Rafael Bressan](https://linkedin.com/in/rafaelbressan)** and adapted by **[Luis Henrique](http://linkedin.com/in/luisnovaisg/)** with **ChatGPT 5.5**.
+This repo is `turma-do-master`. It was inspired by the original [MasterZap](https://www.reddit.com/r/brasil/s/xQeqrG27p8) by **Lucas Matheus** (Replit + Grok). Initial data was gathered by Rafael Bressan, later modified, updated and expanded by **[Luis Henrique](http://linkedin.com/in/luisnovaisg/)** using **ChatGPT 5.5**.
 
 **[Live: turmadomaster.vercel.app](https://turmadomaster.vercel.app/)**

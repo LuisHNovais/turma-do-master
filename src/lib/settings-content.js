@@ -109,4 +109,4 @@ export const SETTINGS_CONTENT = {
   ],
 };
 
-export const SETTINGS_CREDITS = 'Projeto feito por {Rafael Bressan}[https://linkedin.com/in/rafaelbressan] e adaptado por {Luis Henrique}[http://linkedin.com/in/luisnovaisg/] com ChatGPT 5.5. {Código-fonte no GitHub}[https://github.com/LuisHNovais/turma-do-master]. As informações aqui compiladas são de domínio público, extraídas de reportagens jornalísticas e de documentos cujo sigilo foi levantado judicialmente.';
+export const SETTINGS_CREDITS = 'Dados iniciais juntados de Rafael Bressan, posteriormente modificados, atualizados e acrescentados por {Luis Henrique}[http://linkedin.com/in/luisnovaisg/] usando ChatGPT 5.5';

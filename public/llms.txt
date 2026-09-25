@@ -3,7 +3,7 @@
 > Visualizador interativo das 66.387 mensagens de WhatsApp extraídas dos celulares apreendidos de Daniel Vorcaro (Banco Master), em 24 conversas — das trocas com Martha Graeff ao relatório da Polícia Federal sobre os contatos com o ministro Alexandre de Moraes.
 
 ## O que é
-A Turma do Master é um projeto web para navegar pelas conversas que vieram a público no escândalo do Banco Master. O projeto foi criado por Rafael Bressan e adaptado por Luis Henrique (http://linkedin.com/in/luisnovaisg/) com ChatGPT 5.5. Cada contato aparece como integrante da turma do caso, com perfil que explica quem é a pessoa, o que o material revela e de onde vem a informação, com fontes.
+A Turma do Master é um projeto web para navegar pelas conversas que vieram a público no escândalo do Banco Master. Dados iniciais juntados de Rafael Bressan, posteriormente modificados, atualizados e acrescentados por Luis Henrique (http://linkedin.com/in/luisnovaisg/) usando ChatGPT 5.5. Cada contato aparece como integrante da turma do caso, com perfil que explica quem é a pessoa, o que o material revela e de onde vem a informação, com fontes.
 
 ## O material
 O conteúdo vem dos celulares apreendidos de Vorcaro na Operação Compliance Zero e chegou ao público em dois momentos, por caminhos diferentes:
@@ -73,4 +73,4 @@ Cada .md abre com proveniência (fonte, documento com páginas e sha256, períod
 - Poder360 (sigilo derrubado; contratos com o Barci de Moraes), CNN Brasil (como a PF rastreou as mensagens), Metrópoles, Brasil de Fato, ND Mais, Gazeta do Povo, InfoMoney, O Tempo, Agência Brasil
 
 ## Créditos
-Projeto feito por Rafael Bressan (https://linkedin.com/in/rafaelbressan) e adaptado por Luis Henrique (http://linkedin.com/in/luisnovaisg/) com ChatGPT 5.5.
+Dados iniciais juntados de Rafael Bressan, posteriormente modificados, atualizados e acrescentados por Luis Henrique (http://linkedin.com/in/luisnovaisg/) usando ChatGPT 5.5

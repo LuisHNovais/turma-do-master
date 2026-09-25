@@ -8,9 +8,9 @@
     "phone": "553186058949",
     "date_range": {
       "start": "2024-04-19",
-      "end": "2024-08-13"
+      "end": "2024-10-10"
     },
-    "total_messages": 17,
+    "total_messages": 19,
     "source": "Informações de Polícia Judiciária de Análise (IPJ-A) nº 3298613/2026 e nº 1287197/2026 — NADIP/DFIN/CGRC/DICOR/PF",
     "note": "Trechos citados em relatórios policiais — a conversa completa não consta dos documentos."
   },
@@ -255,6 +255,32 @@
       "urls": [],
       "source_page": 16,
       "source_figure": 13
+    },
+    {
+      "id": 18,
+      "timestamp": "2024-10-10T19:25:00",
+      "date": "2024-10-10",
+      "time": "19:25:00",
+      "sender": "Luiz Rennó",
+      "content": "Precisando disso",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "DV: Ja tive que organizar confusao toda"
+    },
+    {
+      "id": 19,
+      "timestamp": "2024-10-10T19:25:05",
+      "date": "2024-10-10",
+      "time": "19:25:05",
+      "sender": "DV",
+      "content": "Davi alcolumbre de mochila bile com canudo com vodka",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "forwarded": true
     }
   ],
   "index": {
@@ -270,6 +296,12 @@
         "message_count": 8,
         "first_message_id": 10,
         "last_message_id": 17
+      },
+      {
+        "date": "2024-10-10",
+        "message_count": 2,
+        "first_message_id": 18,
+        "last_message_id": 19
       }
     ]
   }

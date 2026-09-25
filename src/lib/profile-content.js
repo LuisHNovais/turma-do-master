@@ -146,6 +146,49 @@ export const OTHER_PROFILES = {
     }],
   },
 
+  'fabio-faria-suite': {
+    about: 'Pode ser',
+    sections: [{
+      title: 'Fábio Faria',
+      paragraphs: [
+        { text: 'Fragmento separado da conversa principal porque veio de uma captura avulsa, sem página de laudo associada. Na sequência de 28 de março de 2024, Fábio propõe "{Pegar uma suite em outro hotel}[action:search@fabio-faria-suite:suite em outro hotel]", sugere deixar "{umas 4 lá}[action:search@fabio-faria-suite:umas 4]" e conclui: "{E fazemos um pacto com Davi}[action:search@fabio-faria-suite:pacto com Davi]".' },
+      ],
+    }],
+  },
+
+  'davi-alcolumbre-presidente': {
+    about: 'Pressão!!!',
+    sections: [{
+      title: 'Davi Alcolumbre',
+      paragraphs: [
+        { text: 'Contato salvo como "Davi Alcolumbre Presidente". As capturas mostram uma troca de tom pessoal com Daniel Vorcaro: após uma felicitação enviada por DV, Davi responde agradecendo o "{carinho e amizade fraterna}[action:search@davi-alcolumbre-presidente:amizade fraterna]".' },
+        { text: 'Em março de 2025, Davi escreve "{Sou seu irmão!!!}[action:search@davi-alcolumbre-presidente:Sou seu irmão]" e "Pra vida toda!!!". Em julho, quando DV pede notícias de "nosso amigo", Davi responde "{Estou em Cima!!!}[action:search@davi-alcolumbre-presidente:Estou em Cima]" e, em seguida, "{Pressão!!!}[action:search@davi-alcolumbre-presidente:Pressão]".' },
+      ],
+    }],
+  },
+
+  'grupo-macallan': {
+    about: 'Bonde do tigrao',
+    sections: [{
+      title: 'Grupo Macallan',
+      paragraphs: [
+        { text: 'Grupo de WhatsApp mostrado em captura de 26 de outubro de 2023, com mensagens de DV, {Fábio Faria}[action:contact:fabio-faria] e Lucas kallas USA. DV escreve "{Aquela de 3 metros estara la, Fabio}[action:search@grupo-macallan:Aquela de 3 metros]" e depois brinca: "{Bonde do tigrao}[action:search@grupo-macallan:Bonde do tigrao]".' },
+        { text: 'Na mesma sequência, Fábio comenta que "{Davi aprendeu a falar pelo Google tradutor}[action:search@grupo-macallan:Google tradutor]" e depois registra: "{Davi falou q está com dança nova}[action:search@grupo-macallan:dança nova]".' },
+      ],
+    }],
+  },
+
+  'hugo-motta': {
+    about: 'Ainda nao',
+    sections: [{
+      title: 'Hugo Motta',
+      paragraphs: [
+        { text: 'Captura de 17 de julho de 2025 sobre uma reunião envolvendo Davi e Galípolo. DV diz que ainda não tinha informação e escreve: "{Perguntei davi mas ele tb nao sabe}[action:search@hugo-motta:Perguntei davi]".' },
+        { text: 'Hugo responde que "{Galípolo ficou de ir lá para casa de Davi}[action:search@hugo-motta:Galípolo ficou]" quando a reunião terminasse e acrescenta que Davi ligou enquanto ele decolava. DV conclui que "{ainda ta em reunião}[action:search@hugo-motta:ainda ta em reunião]".' },
+      ],
+    }],
+  },
+
   'vivi-moraes': {
     about: 'Barci de Moraes Sociedade de Advogados',
     sections: [{
@@ -417,6 +460,7 @@ export const OTHER_PROFILES = {
         { text: 'Vorcaro oferece a ida a ele e a um sócio: "{Semana que vem estou fazendo um evento super exclusivo com alexandre de moraes em londres}[action:search@luiz-renno:super exclusivo]". Manda o convite digital do Grupo Voto e pede discrição — "{Pede pra ele nao passar adiante}[action:search@luiz-renno:passar adiante]. Estamos mantendo reservado".' },
         { text: 'E explica o critério de quem entra: "{Concorrente dele nao vai pq nao se da c alexandre}[action:search@luiz-renno:Concorrente dele]". O evento foi {financiado pelo Banco Master}[https://www.poder360.com.br/poder-justica/vorcaro-do-banco-master-financiou-eventos-com-ministros-do-stf/] sem aparecer como realizador.' },
         { text: 'Em agosto de 2024, Vorcaro encaminha a emenda ao Senado e avisa: "{Pensa numa hecatombe}[action:search@luiz-renno:Pensa numa hecatombe]". Rennó pergunta se ele iria "{fazer passar isso}[action:search@luiz-renno:fazer passar isso]" e conclui: "{Vc sextuplica seu negócio}[action:search@luiz-renno:sextuplica]".' },
+        { text: 'A nova captura acrescenta uma troca de 10 de outubro de 2024: Rennó responde "{Precisando disso}[action:search@luiz-renno:Precisando disso]" a uma mensagem de DV e, em seguida, DV encaminha a frase "{Davi alcolumbre de mochila bile com canudo com vodka}[action:search@luiz-renno:mochila bile]".' },
       ],
     }],
   },
@@ -520,7 +564,7 @@ export const SOURCES = [
   { label: 'ND Mais — Quem é Alexandre de Moraes', url: 'https://ndmais.com.br/politica/quem-e-alexandre-de-moraes/' },
 ];
 
-export const CREDITS = 'Projeto feito por {Rafael Bressan}[https://linkedin.com/in/rafaelbressan] e adaptado por {Luis Henrique}[http://linkedin.com/in/luisnovaisg/] com ChatGPT 5.5. {Código-fonte no GitHub}[https://github.com/LuisHNovais/turma-do-master]. As informações aqui compiladas são de domínio público, extraídas de reportagens jornalísticas e fontes abertas. Este projeto não tem vinculação com nenhuma das partes envolvidas.';
+export const CREDITS = 'Dados iniciais juntados de Rafael Bressan, posteriormente modificados, atualizados e acrescentados por {Luis Henrique}[http://linkedin.com/in/luisnovaisg/] usando ChatGPT 5.5';
 
 /**
  * Parse inline links in text. Format: {link text}[url]

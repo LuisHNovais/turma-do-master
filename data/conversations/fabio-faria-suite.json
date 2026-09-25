@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Fábio Faria"
+    ],
+    "saved_as": "Fábio Faria",
+    "phone": null,
+    "date_range": {
+      "start": "2024-03-28",
+      "end": "2024-03-28"
+    },
+    "total_messages": 5,
+    "source": "Capturas de tela fornecidas pelo usuário",
+    "source_kind": "user-screenshot",
+    "source_how": "Transcrição manual das capturas de tela anexadas pelo usuário nesta sessão.",
+    "note": "Fragmento separado da conversa principal de Fábio Faria por ter vindo de captura avulsa, sem página de laudo associada. DV foi tratado como Daniel Vorcaro."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2024-03-28T13:24:00",
+      "date": "2024-03-28",
+      "time": "13:24:00",
+      "sender": "Fábio Faria",
+      "content": "E depois vamos pra um menor",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2024-03-28T13:31:00",
+      "date": "2024-03-28",
+      "time": "13:31:00",
+      "sender": "Fábio Faria",
+      "content": "Pegar uma suite em outro hotel",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 3,
+      "timestamp": "2024-03-28T13:38:00",
+      "date": "2024-03-28",
+      "time": "13:38:00",
+      "sender": "Fábio Faria",
+      "content": "Deixa umas 4 lá",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2024-03-28T13:49:00",
+      "date": "2024-03-28",
+      "time": "13:49:00",
+      "sender": "DV",
+      "content": "Pode ser",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2024-03-28T13:58:00",
+      "date": "2024-03-28",
+      "time": "13:58:00",
+      "sender": "Fábio Faria",
+      "content": "E fazemos um pacto com Davi",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2024-03-28",
+        "message_count": 5,
+        "first_message_id": 1,
+        "last_message_id": 5
+      }
+    ]
+  }
+}

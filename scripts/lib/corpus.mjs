@@ -55,7 +55,7 @@ export function sourceOf(entry) {
       how: 'Transcrição manual das imagens do laudo; cada mensagem cita a página e a figura de origem.',
     };
   }
-  if (entry.source_kind === 'news-report' || entry.source_url) {
+  if (entry.source_kind || entry.source_url) {
     return {
       kind: entry.source_kind || 'news-report',
       label: entry.source,

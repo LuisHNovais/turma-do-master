@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "participants": [
+      "DV",
+      "Grupo Macallan",
+      "Fábio Faria",
+      "Lucas kallas USA"
+    ],
+    "saved_as": null,
+    "phone": null,
+    "date_range": {
+      "start": "2023-10-26",
+      "end": "2023-10-26"
+    },
+    "total_messages": 8,
+    "source": "Capturas de tela fornecidas pelo usuário",
+    "source_kind": "user-screenshot",
+    "source_how": "Transcrição manual das capturas de tela anexadas pelo usuário nesta sessão.",
+    "note": "Trecho visível da conversa em grupo; a conversa completa não consta do material. DV foi tratado como Daniel Vorcaro."
+  },
+  "messages": [
+    {
+      "id": 1,
+      "timestamp": "2023-10-26T08:04:00",
+      "date": "2023-10-26",
+      "time": "08:04:00",
+      "sender": "DV",
+      "content": "Aquela de 3 metros estara la, Fabio",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 2,
+      "timestamp": "2023-10-26T08:05:00",
+      "date": "2023-10-26",
+      "time": "08:05:00",
+      "sender": "Fábio Faria",
+      "content": "A dupla né",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "DV: Aquela de 3 metros estara la, Fabio"
+    },
+    {
+      "id": 3,
+      "timestamp": "2023-10-26T08:05:05",
+      "date": "2023-10-26",
+      "time": "08:05:05",
+      "sender": "Fábio Faria",
+      "content": "Foda que o Davi aprendeu a falar pelo Google tradutor e pode assustar a menina",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 4,
+      "timestamp": "2023-10-26T08:05:10",
+      "date": "2023-10-26",
+      "time": "08:05:10",
+      "sender": "DV",
+      "content": "Kkkkkk",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 5,
+      "timestamp": "2023-10-26T08:05:15",
+      "date": "2023-10-26",
+      "time": "08:05:15",
+      "sender": "DV",
+      "content": "Bonde do tigrao",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 6,
+      "timestamp": "2023-10-26T08:06:00",
+      "date": "2023-10-26",
+      "time": "08:06:00",
+      "sender": "Lucas kallas USA",
+      "content": "Arquivo de mensagem de vídeo",
+      "type": "video",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 7,
+      "timestamp": "2023-10-26T08:07:00",
+      "date": "2023-10-26",
+      "time": "08:07:00",
+      "sender": "Fábio Faria",
+      "content": "Davi falou q está com dança nova 😂",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": []
+    },
+    {
+      "id": 8,
+      "timestamp": "2023-10-26T08:08:00",
+      "date": "2023-10-26",
+      "time": "08:08:00",
+      "sender": "Lucas kallas USA",
+      "content": "Kkkk",
+      "type": "text",
+      "is_edited": false,
+      "attachment": null,
+      "urls": [],
+      "quoted": "Fábio Faria: Davi falou q está com dança nova"
+    }
+  ],
+  "index": {
+    "dates": [
+      {
+        "date": "2023-10-26",
+        "message_count": 8,
+        "first_message_id": 1,
+        "last_message_id": 8
+      }
+    ]
+  }
+}
