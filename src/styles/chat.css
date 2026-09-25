@@ -282,6 +282,20 @@
   color: var(--WDS-content-default);
 }
 
+.chat-msg-sender {
+  margin: -1px 18px 3px 0;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--WDS-content-deemphasized);
+}
+
+.chat-msg-sender.outgoing {
+  margin: -1px 0 3px 18px;
+  text-align: right;
+  color: var(--WDS-green-500);
+}
+
 .chat-msg-content a {
   color: var(--WDS-cobalt-400);
   text-decoration: none;

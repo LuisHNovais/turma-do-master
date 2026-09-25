@@ -263,7 +263,7 @@ export function attachContextMenu(chatContainer, { senderNames = {}, incomingSen
     return {
       id,
       content,
-      sender: isOutgoing ? 'DV' : incomingSender,
+      sender: row.dataset.sender || (isOutgoing ? 'DV' : incomingSender),
       date,
       time: meta.replace(/editada/i, '').trim(),
       type: 'text',

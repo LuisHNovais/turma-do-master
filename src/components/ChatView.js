@@ -37,7 +37,7 @@ const BACK_ICON = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" s
  * @param {Array} messages
  * @returns {HTMLElement}
  */
-function renderDaySection(date, messages) {
+function renderDaySection(date, messages, options = {}) {
   const section = document.createElement('section');
   section.className = 'chat-day';
   section.dataset.date = date;
@@ -50,7 +50,7 @@ function renderDaySection(date, messages) {
 
   // Messages
   for (const msg of messages) {
-    section.appendChild(renderMessage(msg));
+    section.appendChild(renderMessage(msg, options));
   }
 
   return section;
@@ -407,13 +407,14 @@ function renderDeletedMessage() {
  * @param {object} msg
  * @returns {HTMLElement}
  */
-function renderMessage(msg) {
+function renderMessage(msg, { showSenderNames = false } = {}) {
   const isOutgoing = msg.sender === 'DV';
   const isSystem = msg.type === 'system';
 
   const row = document.createElement('div');
   row.className = `chat-msg-row ${isOutgoing ? 'outgoing' : 'incoming'}${isSystem ? ' system' : ''}`;
   row.dataset.id = msg.id;
+  row.dataset.sender = msg.sender || '';
 
   if (isSystem) {
     const bubble = document.createElement('div');
@@ -428,6 +429,13 @@ function renderMessage(msg) {
 
   const content = document.createElement('div');
   content.className = 'chat-msg-content';
+
+  if (showSenderNames && msg.sender) {
+    const sender = document.createElement('div');
+    sender.className = `chat-msg-sender ${isOutgoing ? 'outgoing' : 'incoming'}`;
+    sender.textContent = msg.sender;
+    bubble.appendChild(sender);
+  }
 
   switch (msg.type) {
     case 'image':
@@ -523,6 +531,7 @@ function renderMessage(msg) {
 
 export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onMenuOpen, media: mediaOptions }) {
   if (mediaOptions) media = { ...media, ...mediaOptions, container };
+  const showSenderNames = conversation.participants.length > 2;
   // Clear container
   while (container.firstChild) container.removeChild(container.firstChild);
 
@@ -714,7 +723,7 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
     container: messagesArea,
     dateIndex,
     loadMessages,
-    renderDay: (date, messages) => renderDaySection(date, messages),
+    renderDay: (date, messages) => renderDaySection(date, messages, { showSenderNames }),
   });
 
   return { element: el, loader };
