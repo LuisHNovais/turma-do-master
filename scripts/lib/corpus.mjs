@@ -144,7 +144,7 @@ export function mentionsOf(person, entries, messagesOf) {
   for (const entry of entries) {
     const hits = [];
     for (const m of messagesOf(entry.id)) {
-      const text = normalize(m.content || '');
+      const text = normalize(`${m.sender || ''} ${m.content || ''}`);
       const rule = rules.find(r => (!r.only || r.only.has(entry.id)) && r.re.test(text) && !(r.unless && r.unless.test(text)));
       // Each hit remembers the alias that found it, so a page can say
       // "8 by «gonet», 5 by «paulo»" instead of one inferred total.

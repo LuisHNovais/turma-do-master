@@ -74,7 +74,30 @@
 .chat-header-info {
   font-size: 12.5px;
   color: var(--WDS-content-deemphasized);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
+
+.chat-source-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border: 1.5px solid var(--master-ink);
+  border-radius: 999px;
+  background: #fffdf3;
+  color: var(--master-ink);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.35;
+  box-shadow: 2px 2px 0 var(--master-shadow);
+}
+
+.chat-source-badge.screenshot { background: #ffe2ef; }
+.chat-source-badge.report { background: #e4f7ff; }
+.chat-source-badge.news { background: #fff0a8; }
+.chat-source-badge.leak { background: #e8f8d9; }
 
 /* ── Chat header menu button ──────────────────── */
 .chat-header-menu-btn {
@@ -225,6 +248,49 @@
   box-shadow: 4px 4px 0 var(--master-shadow);
 }
 
+.chat-partial-notice,
+.chat-cited-people {
+  margin: 8px 48px 0 63px;
+  padding: 8px 12px;
+  border: 2px solid var(--master-ink);
+  border-radius: 14px;
+  background: #fff8dc;
+  box-shadow: 3px 3px 0 var(--master-shadow);
+  color: var(--master-ink);
+  font-size: 12.5px;
+  line-height: 1.35;
+  flex-shrink: 0;
+}
+
+.chat-partial-notice {
+  background: #ffe2ef;
+  font-weight: 700;
+}
+
+.chat-cited-people {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  background: #e4f7ff;
+}
+
+.chat-cited-label {
+  margin-right: 2px;
+  font-weight: 900;
+}
+
+.chat-cited-people a {
+  color: var(--master-ink);
+  font-weight: 800;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+.chat-cited-people a:hover {
+  color: var(--WDS-cobalt-400);
+}
+
 .chat-msg-bubble.incoming {
   background-color: var(--WDS-systems-bubble-surface-incoming);
   border-top-left-radius: 4px;
@@ -287,13 +353,12 @@
   font-size: 12px;
   font-weight: 800;
   line-height: 1.2;
-  color: var(--WDS-content-deemphasized);
+  color: var(--chat-sender-color, var(--WDS-content-deemphasized));
 }
 
 .chat-msg-sender.outgoing {
   margin: -1px 0 3px 18px;
   text-align: right;
-  color: var(--WDS-green-500);
 }
 
 .chat-msg-content a {
@@ -545,6 +610,12 @@
 }
 
 @media (max-width: 900px) {
+  .chat-partial-notice,
+  .chat-cited-people {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
   .msg-highlight {
     margin-left: -16px;
     margin-right: -16px;
@@ -554,6 +625,12 @@
 }
 
 @media (max-width: 600px) {
+  .chat-partial-notice,
+  .chat-cited-people {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
   .msg-highlight {
     margin-left: -12px;
     margin-right: -12px;

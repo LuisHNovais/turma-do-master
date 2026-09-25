@@ -66,6 +66,39 @@ export const PEOPLE = [
     ],
   },
   {
+    slug: 'fabio-faria',
+    name: 'Fábio Faria',
+    role: 'Ex-ministro das Comunicações',
+    profile: 'fabio-faria',
+    aliases: [
+      { match: 'fabio faria', only: ['fabio-faria', 'fabio-faria-suite', 'grupo-macallan'] },
+      { match: 'fabio', only: ['fabio-faria', 'fabio-faria-suite', 'grupo-macallan'] },
+    ],
+  },
+  {
+    slug: 'davi-alcolumbre',
+    name: 'Davi Alcolumbre',
+    role: 'Presidente do Senado Federal',
+    profile: 'davi-alcolumbre-presidente',
+    aliases: [
+      { match: 'davi alcolumbre' },
+      { match: 'davi', only: ['davi-alcolumbre-presidente', 'hugo-motta', 'grupo-macallan'] },
+    ],
+  },
+  {
+    slug: 'hugo-motta',
+    name: 'Hugo Motta',
+    role: 'Presidente da Câmara dos Deputados',
+    profile: 'hugo-motta',
+    aliases: [{ match: 'hugo motta', only: ['hugo-motta'] }],
+  },
+  {
+    slug: 'lucas-kallas',
+    name: 'Lucas Kallas',
+    role: 'Participante do Grupo Macallan',
+    aliases: [{ match: 'lucas kallas', only: ['grupo-macallan'] }],
+  },
+  {
     slug: 'eduardo-bolsonaro',
     name: 'Eduardo Bolsonaro',
     role: 'Deputado federal',

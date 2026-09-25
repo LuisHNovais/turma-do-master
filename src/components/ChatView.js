@@ -30,6 +30,30 @@ const MAP_PIN = '/assets/map-pin.jpg';
 
 const BACK_ICON = `<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>`;
 
+const SENDER_COLORS = ['#008c8c', '#d72f7a', '#7c4bc9', '#1479c9', '#1c9f4a', '#f28c28', '#7b4a22'];
+
+function colorForSender(sender) {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < sender.length; i++) {
+    hash ^= sender.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193) >>> 0;
+  }
+  return SENDER_COLORS[hash % SENDER_COLORS.length];
+}
+
+function sourceBadgeFor(conversation) {
+  const source = String(conversation.source || '');
+  if (conversation.source_kind === 'user-screenshot') return { label: 'Print do usuário', kind: 'screenshot' };
+  if (conversation.source_kind === 'news-report' || conversation.source_url) return { label: 'Reportagem', kind: 'news' };
+  if (source.startsWith('IPJ-A') || source.includes('(IPJ-A)')) return { label: 'Laudo PF', kind: 'report' };
+  return { label: 'Vazamento', kind: 'leak' };
+}
+
+function partialNoticeFor(conversation) {
+  if (conversation.source_kind !== 'user-screenshot') return null;
+  return 'Captura parcial: este trecho foi transcrito das prints recebidas e não representa a conversa completa.';
+}
+
 
 /**
  * Render a single day section with date badge + messages.
@@ -433,6 +457,7 @@ function renderMessage(msg, { showSenderNames = false } = {}) {
   if (showSenderNames && msg.sender) {
     const sender = document.createElement('div');
     sender.className = `chat-msg-sender ${isOutgoing ? 'outgoing' : 'incoming'}`;
+    sender.style.setProperty('--chat-sender-color', colorForSender(msg.sender));
     sender.textContent = msg.sender;
     bubble.appendChild(sender);
   }
@@ -529,7 +554,7 @@ function renderMessage(msg, { showSenderNames = false } = {}) {
  */
 // Use the design system meetball icon for 3-dot menu
 
-export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onMenuOpen, media: mediaOptions }) {
+export function renderChatView(container, { conversation, dateIndex, loadMessages, onBack, onContactClick, onSearch, onCloseChat, onAbout, onScreenshot, onExport, onMenuOpen, media: mediaOptions, citedPeople = [] }) {
   if (mediaOptions) media = { ...media, ...mediaOptions, container };
   const showSenderNames = conversation.participants.length > 2;
   // Clear container
@@ -585,7 +610,14 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
 
   const subtitleEl = document.createElement('div');
   subtitleEl.className = 'chat-header-info';
-  subtitleEl.textContent = `${conversation.total_messages.toLocaleString('pt-BR')} mensagens`;
+  const countEl = document.createElement('span');
+  countEl.textContent = `${conversation.total_messages.toLocaleString('pt-BR')} mensagens`;
+  subtitleEl.appendChild(countEl);
+  const sourceBadge = sourceBadgeFor(conversation);
+  const badgeEl = document.createElement('span');
+  badgeEl.className = `chat-source-badge ${sourceBadge.kind}`;
+  badgeEl.textContent = sourceBadge.label;
+  subtitleEl.appendChild(badgeEl);
   infoEl.appendChild(subtitleEl);
 
   header.appendChild(infoEl);
@@ -700,6 +732,30 @@ export function renderChatView(container, { conversation, dateIndex, loadMessage
 
 
   el.appendChild(header);
+
+  const partialNotice = partialNoticeFor(conversation);
+  if (partialNotice) {
+    const notice = document.createElement('div');
+    notice.className = 'chat-partial-notice';
+    notice.textContent = partialNotice;
+    el.appendChild(notice);
+  }
+
+  if (citedPeople.length) {
+    const people = document.createElement('div');
+    people.className = 'chat-cited-people';
+    const label = document.createElement('span');
+    label.className = 'chat-cited-label';
+    label.textContent = 'Citados nesta conversa';
+    people.appendChild(label);
+    for (const person of citedPeople.slice(0, 8)) {
+      const link = document.createElement('a');
+      link.href = `/quem/${person.slug}`;
+      link.textContent = person.name;
+      people.appendChild(link);
+    }
+    el.appendChild(people);
+  }
 
   // Messages area
   const messagesArea = document.createElement('div');

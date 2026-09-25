@@ -25,6 +25,22 @@ import { renderCallsPanel } from './components/CallsPanel.js';
 import { renderGamePanel } from './components/GamePanel.js';
 import { exportUrl, EXPORT_ALL_URL, downloadFile } from './lib/export.js';
 import { copyText } from './lib/utils.js';
+import { PEOPLE } from './lib/people-content.js';
+import { normalize } from './lib/search.js';
+
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function citedPeopleForConversation(conversationId, searchIndex) {
+  const texts = searchIndex.map(entry => normalize(`${entry.sender || ''} ${entry.content || ''}`));
+  return PEOPLE.filter(person => person.aliases.some(alias => {
+    if (alias.only && !alias.only.includes(conversationId)) return false;
+    const re = new RegExp(`(^|[^a-z0-9])${escapeRegExp(normalize(alias.match))}([^a-z0-9]|$)`);
+    const unless = alias.unless ? new RegExp(normalize(alias.unless)) : null;
+    return texts.some(text => re.test(text) && !(unless && unless.test(text)));
+  })).map(({ slug, name, role }) => ({ slug, name, role }));
+}
 
 // ── Active state (only one thing at a time) ──────
 let activeLoader = null;
@@ -273,6 +289,12 @@ async function init() {
     currentConversationId = id;
 
     const dateIndex = await store.getConversationIndex(id);
+    let citedPeople = [];
+    try {
+      citedPeople = citedPeopleForConversation(id, await store.getSearchIndex(id));
+    } catch (err) {
+      console.warn(`Failed to load people index for ${id}:`, err);
+    }
 
     // Build toggleSearch bound to this conversation
     const toggleSearch = () => toggleChatSearch(id, dateIndex);
@@ -352,6 +374,7 @@ async function init() {
         onOpenChat: (convId) => router.navigate('chat', convId),
         onCopy: (text, label) => copyText(text).then(ok => showToast(mainArea, ok ? label : 'Não foi possível copiar')),
       },
+      citedPeople,
       onMenuOpen: () => prepareScreenshot(mainArea, contactName),
       onContactClick: () => {
         // Only one right drawer at a time

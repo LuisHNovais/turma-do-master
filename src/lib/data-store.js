@@ -66,6 +66,7 @@ export class DataStore {
     }));
     this._conversations = null;
     this._indexes = new Map();
+    this._searchIndexes = new Map();
     this._cache = new LRUCache(cacheSize);
     this._pending = new Map(); // dedup in-flight requests
   }
@@ -106,6 +107,23 @@ export class DataStore {
     const dates = data.dates || [];
     this._indexes.set(conversationId, dates);
     return dates;
+  }
+
+  /**
+   * Load the lightweight search index for a conversation.
+   * @param {string} conversationId
+   * @returns {Promise<Array>} Array of { id, date, sender, content }
+   */
+  async getSearchIndex(conversationId) {
+    if (this._searchIndexes.has(conversationId)) {
+      return this._searchIndexes.get(conversationId);
+    }
+    const data = await this._fetcher(
+      `${this._basePath}/${conversationId}/search-index.json`
+    );
+    const index = Array.isArray(data) ? data : [];
+    this._searchIndexes.set(conversationId, index);
+    return index;
   }
 
   /**
